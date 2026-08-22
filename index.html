@@ -1,76 +1,80 @@
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awais Rafiq | Azzylegacy | Digital Creator</title>
+    <style>
+        :root { --bg: #0a0a0a; --accent: #00ffcc; --text: #ffffff; --card: #161616; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { max-width: 600px; width: 100%; text-align: center; }
+        h1 { font-size: 2.5rem; margin-bottom: 5px; color: var(--accent); }
+        h2 { font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; opacity: 0.8; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+        a.btn { display: block; background: var(--card); color: var(--text); padding: 15px; border-radius: 8px; text-decoration: none; border: 1px solid #333; transition: 0.3s; font-weight: 500; }
+        a.btn:hover { background: var(--accent); color: #000; transform: scale(1.02); }
+        .credentials { margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; font-size: 0.85rem; opacity: 0.6; }
+        .footer { margin-top: 30px; font-size: 0.7rem; color: #666; }
+    </style>
+    <!-- Master Nuclear Schema -->
+    <script type="application/ld+json">
     {
-      "@type": "Person",
-      "@id": "https://awaismehar404.github.io/#awais",
-      "name": "Awais Rafiq",
-      "alternateName": "Azzylegacy",
-      "birthDate": "1998-10-25",
-      "jobTitle": [
-        "Music Producer",
-        "Filmmaker",
-        "Photographer",
-        "Video Producer"
-      ],
-      "homeLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Sialkot and Lahore",
-          "addressCountry": "Pakistan"
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://awaismehar404.github.io/#awais",
+          "name": "Awais Rafiq",
+          "alternateName": ["Azzylegacy", "Azzy Legacy"],
+          "birthDate": "1998-10-25",
+          "jobTitle": ["Music Producer", "Filmmaker", "Photographer", "Video Producer"],
+          "worksFor": {"@id": "https://awaismehar404.github.io/#azzylegacy"},
+          "sameAs": [
+            "https://www.linkedin.com/in/awaismehar",
+            "https://www.snapchat.com/add/azzylegacy",
+            "https://linktr.ee/azzylegacy",
+            "https://zenodo.org/records/22053754"
+          ]
+        },
+        {
+          "@type": ["Organization", "MusicGroup", "FilmStudio"],
+          "@id": "https://awaismehar404.github.io/#azzylegacy",
+          "name": "Azzylegacy",
+          "url": "https://awaismehar404.github.io/",
+          "founder": {"@id": "https://awaismehar404.github.io/#awais"},
+          "sameAs": [
+            "https://www.instagram.com/azzylegacy",
+            "https://www.tiktok.com/@azzylegacy",
+            "https://www.facebook.com/azzylegacy",
+            "https://zenodo.org/records/22053754"
+          ]
         }
-      },
-      "worksFor": {
-        "@id": "https://awaismehar404.github.io/#azzylegacy"
-      },
-      "sameAs": [
-        "https://zenodo.org/records/22053754",
-        "https://linktr.ee/azzylegacy"
-      ]
-    },
-    {
-      "@type": ["Organization", "MusicGroup", "FilmStudio"],
-      "@id": "https://awaismehar404.github.io/#azzylegacy",
-      "name": "Azzylegacy",
-      "alternateName": [
-        "Azzy Legacy",
-        "Azzy Studio"
-      ],
-      "url": "https://awaismehar404.github.io/",
-      "description": "Independent digital creative entity, music producer, filmmaker, and photographer specializing in dark underground beats, fashion cinematography, and visual storytelling based in Sialkot and Lahore, Pakistan.",
-      "foundingDate": "2026",
-      "foundingLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Sialkot and Lahore",
-          "addressCountry": "Pakistan"
-        }
-      },
-      "founder": {
-        "@id": "https://awaismehar404.github.io/#awais"
-      },
-      "knowsAbout": [
-        "Music Production",
-        "Cinematic Videography",
-        "Fashion Cinematography",
-        "Dark Underground Beats",
-        "Color Grading"
-      ],
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://awaismehar404.github.io/"
-      },
-      "sameAs": [
-        "https://www.instagram.com/azzylegacy",
-        "https://www.tiktok.com/@azzylegacy",
-        "https://www.facebook.com/azzylegacy",
-        "https://zenodo.org/records/22053754",
-        "https://linktr.ee/azzylegacy"
       ]
     }
-  ]
-}
-</script>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Azzylegacy</h1>
+        <h2>Awais Rafiq | Independent Creator</h2>
+        
+        <div class="grid">
+            <a href="https://linktr.ee/azzylegacy" class="btn">Linktree Hub</a>
+            <a href="https://www.linkedin.com/in/awaismehar" class="btn">LinkedIn CV</a>
+            <a href="https://www.instagram.com/azzylegacy" class="btn">Instagram</a>
+            <a href="https://www.tiktok.com/@azzylegacy" class="btn">TikTok</a>
+            <a href="https://www.snapchat.com/add/azzylegacy" class="btn">Snapchat</a>
+            <a href="https://www.facebook.com/azzylegacy" class="btn">Facebook</a>
+            <a href="https://zenodo.org/records/22053754" class="btn" style="grid-column: span 2; border-color: var(--accent);">Academic DOI (Zenodo)</a>
+        </div>
+
+        <div class="credentials">
+            <p>Based in Sialkot & Lahore, Pakistan.<br>Certified Digital Entity</p>
+        </div>
+        
+        <div class="footer">
+            © 2026 Azzylegacy Official.
+        </div>
+    </div>
+</body>
+</html>
