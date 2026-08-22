@@ -157,75 +157,6 @@ body:before{
   z-index:0;
 }
 
-/* ================= BOOT ================= */
-
-#boot{
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  background:#010202;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:25px;
-  transition:opacity .8s ease,visibility .8s;
-}
-
-#boot.hide{
-  opacity:0;
-  visibility:hidden;
-}
-
-.bootBox{
-  width:min(440px,100%);
-  font-family:"Space Mono",monospace;
-  color:var(--cyan);
-}
-
-.bootLogo{
-  font-size:42px;
-  font-weight:700;
-  letter-spacing:10px;
-  margin-bottom:30px;
-  text-shadow:0 0 30px var(--cyan);
-}
-
-.bootLine{
-  font-size:11px;
-  margin:10px 0;
-  opacity:0;
-  animation:bootIn .35s forwards;
-}
-
-.bootLine:nth-child(2){animation-delay:.2s}
-.bootLine:nth-child(3){animation-delay:.5s}
-.bootLine:nth-child(4){animation-delay:.8s}
-.bootLine:nth-child(5){animation-delay:1.1s}
-
-.bootProgress{
-  height:2px;
-  background:#0a2925;
-  margin-top:25px;
-  overflow:hidden;
-}
-
-.bootProgress span{
-  display:block;
-  height:100%;
-  width:0;
-  background:var(--cyan);
-  box-shadow:0 0 15px var(--cyan);
-  animation:progress 1.8s forwards;
-}
-
-@keyframes bootIn{
-  to{opacity:1}
-}
-
-@keyframes progress{
-  to{width:100%}
-}
-
 /* ================= MAIN ================= */
 
 .wrap{
@@ -761,19 +692,6 @@ footer{
 
 <body>
 
-<!-- ================= BOOT SCREEN ================= -->
-
-<div id="boot">
-  <div class="bootBox">
-    <div class="bootLogo">AZ</div>
-    <div class="bootLine">[01] INITIALIZING LEGACY SYSTEM...</div>
-    <div class="bootLine">[02] IDENTITY VERIFIED // AZZYLEGACY</div>
-    <div class="bootLine">[03] CREATIVE ENGINE // ONLINE</div>
-    <div class="bootLine">[04] CONNECTION // SECURE</div>
-    <div class="bootProgress"><span></span></div>
-  </div>
-</div>
-
 <canvas id="matrix"></canvas>
 
 <div class="wrap">
@@ -998,4 +916,101 @@ footer{
     <a class="socialCard" href="https://www.tiktok.com/@azzylegacy" target="_blank">
       <div class="socialIcon">♪</div>
       <b>TIKTOK</b>
-      <span>@a
+      <span>@azzylegacy</span>
+    </a>
+
+    <a class="socialCard" href="https://www.facebook.com/share/1C9nU5Veth/" target="_blank">
+      <div class="socialIcon">f</div>
+      <b>FACEBOOK</b>
+      <span>Official Profile</span>
+    </a>
+
+    <a class="socialCard" href="https://www.snapchat.com/add/azzy_studio" target="_blank">
+      <div class="socialIcon">◇</div>
+      <b>SNAPCHAT</b>
+      <span>@azzy_studio</span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= TERMINAL ================= -->
+
+<section>
+  <div class="label">// SYSTEM TERMINAL</div>
+  <div class="terminal">
+    <div class="termTop">
+      AZZYLEGACY@SYSTEM // SECURE CONNECTION
+    </div>
+    <div class="termBody">
+      <b>></b> whoami<br>
+      Awais Rafiq // Azzylegacy<br><br>
+      <b>></b> mission<br>
+      CREATE. CAPTURE. BUILD.<br><br>
+      <b>></b> location<br>
+      SIALKOT &rarr; LAHORE &rarr; PAKISTAN<br><br>
+      <b>></b> status<br>
+      <b>CREATIVE ENGINE ONLINE_</b>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+  <div class="contact">
+    <div class="label">// CONNECTION REQUEST</div>
+    <h2>Let's build something legendary.</h2>
+    <p>Projects, collaborations, cinematic productions, photography or creative work.</p>
+    <a class="btn primary" href="https://linktr.ee/azzylegacy" target="_blank">
+       INITIATE CONTACT ↗
+    </a>
+  </div>
+</section>
+
+<footer>
+  AZZYLEGACY // AWAIS RAFIQ<br><br>
+  &copy; 2016 &mdash; 2026 // ALL SYSTEMS RESERVED
+</footer>
+
+</div>
+
+<script>
+  // Simple toggle script for accordion services
+  document.querySelectorAll('.serviceHead').forEach(header => {
+    header.addEventListener('click', () => {
+      const parent = header.parentElement;
+      parent.classList.toggle('open');
+    });
+  });
+
+  // Matrix Background Effect
+  const canvas = document.getElementById('matrix');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const characters = 'AZZYLEGACY01019982030FX';
+  const fontSize = 14;
+  const columns = canvas.width / fontSize;
+  const drops = [];
+  for(let i=0; i<columns; i++) drops[i] = 1;
+
+  function drawMatrix() {
+      ctx.fillStyle = 'rgba(2, 4, 4, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#00ffd5';
+      ctx.font = fontSize + 'px monospace';
+      for(let i=0; i<drops.length; i++) {
+          const text = characters.charAt(Math.floor(Math.random() * characters.length));
+          ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+          if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+          drops[i]++;
+      }
+  }
+  setInterval(drawMatrix, 30);
+  window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  });
+</script>
+</body>
+</html>
