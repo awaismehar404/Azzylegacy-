@@ -6,19 +6,23 @@
     <title>Azzylegacy | Awais Rafiq | Official Digital Hub</title>
     <style>
         :root { --bg: #050505; --accent: #00ffcc; --text: #ffffff; --card: #121212; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 800px; margin: auto; }
-        .hero { text-align: center; padding: 50px 0; }
-        h1 { font-size: 3rem; color: var(--accent); margin: 0; }
-        .gallery { display: flex; gap: 15px; justify-content: center; margin: 20px 0; }
-        .gallery img { width: 45%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 2px solid #333; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 40px 0; }
-        .btn { background: var(--card); color: var(--text); padding: 15px; text-align: center; border-radius: 10px; text-decoration: none; border: 1px solid #333; transition: 0.3s; font-weight: bold; }
-        .btn:hover { background: var(--accent); color: #000; transform: translateY(-5px); }
-        .bio { background: var(--card); padding: 30px; border-radius: 20px; border-left: 5px solid var(--accent); margin-top: 40px; }
-        footer { text-align: center; margin-top: 50px; color: #666; font-size: 0.9rem; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; margin: 0; padding: 20px; line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 800px; margin: auto; position: relative; z-index: 2; }
+        .hero { text-align: center; padding: 40px 0 20px; }
+        h1 { font-size: 3rem; color: var(--accent); margin: 0; text-shadow: 0 0 20px rgba(0,255,204,0.3); }
+        .single-img { text-align: center; margin: 20px 0; }
+        .single-img img { width: 100%; max-width: 380px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,255,204,0.2); border: 2px solid #333; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 30px 0; }
+        .btn { background: var(--card); color: var(--text); padding: 14px; text-align: center; border-radius: 10px; text-decoration: none; border: 1px solid #333; transition: 0.3s; font-weight: bold; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; }
+        .btn:hover { background: var(--accent); color: #000; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,255,204,0.4); }
+        .bio { background: var(--card); padding: 25px; border-radius: 15px; border-left: 5px solid var(--accent); margin-top: 30px; }
+        .game-box { background: #0d0d0d; border: 1px dashed var(--accent); padding: 20px; border-radius: 12px; text-align: center; margin-top: 30px; }
+        .game-box button { background: var(--accent); color: #000; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px; transition: 0.2s; }
+        .game-box button:hover { transform: scale(1.05); }
+        canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.15; }
+        footer { text-align: center; margin-top: 40px; color: #666; font-size: 0.9rem; }
     </style>
-    <!-- Nuclear Master Schema -->
+    <!-- Nuclear Master Schema with All Updated Links -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,6 +39,9 @@
             "https://www.facebook.com/share/1C9nU5Veth/",
             "https://musicbrainz.org/user/Azzylegacy",
             "https://linktr.ee/azzylegacy",
+            "https://www.tiktok.com/@azzylegacy",
+            "https://www.tiktok.com/@azzy.raw",
+            "https://www.instagram.com/azzylegacy",
             "https://zenodo.org/records/22053754"
           ]
         },
@@ -47,8 +54,10 @@
           "sameAs": [
             "https://www.instagram.com/azzylegacy",
             "https://www.tiktok.com/@azzylegacy",
+            "https://www.tiktok.com/@azzy.raw",
             "https://www.facebook.com/share/1C9nU5Veth/",
-            "https://musicbrainz.org/user/Azzylegacy"
+            "https://musicbrainz.org/user/Azzylegacy",
+            "https://zenodo.org/records/22053754"
           ]
         }
       ]
@@ -56,34 +65,82 @@
     </script>
 </head>
 <body>
+    <canvas id="matrix"></canvas>
     <div class="container">
         <div class="hero">
             <h1>Azzylegacy</h1>
             <p>Digital Creator | Cinematic Production | Music & Sound Design</p>
         </div>
 
-        <div class="gallery">
-            <img src="7521.jpg" alt="Azzylegacy Portfolio">
-            <img src="579602.jpg" alt="Azzylegacy Portfolio">
+        <div class="single-img">
+            <img src="7521.jpg" alt="Azzylegacy Official">
         </div>
 
         <div class="grid">
-            <a href="https://linktr.ee/azzylegacy" class="btn">Linktree Hub</a>
-            <a href="https://www.linkedin.com/in/awaismehar" class="btn">LinkedIn CV</a>
-            <a href="https://drive.google.com/file/d/13opzb5GGpTH-OTIxTEC-OT7UdrtH6Upu/view" class="btn">My CV (PDF)</a>
-            <a href="https://www.snapchat.com/add/azzy_studio" class="btn">Snapchat</a>
-            <a href="https://www.facebook.com/share/1C9nU5Veth/" class="btn">Facebook</a>
-            <a href="https://musicbrainz.org/user/Azzylegacy" class="btn">MusicBrainz</a>
-            <a href="https://zenodo.org/records/22053754" class="btn" style="grid-column: span 2; border-color: var(--accent);">Academic DOI / Research</a>
+            <a href="https://linktr.ee/azzylegacy" class="btn" target="_blank">Linktree Hub</a>
+            <a href="https://www.linkedin.com/in/awaismehar" class="btn" target="_blank">LinkedIn CV</a>
+            <a href="https://www.snapchat.com/add/azzy_studio" class="btn" target="_blank">Snapchat</a>
+            <a href="https://www.facebook.com/share/1C9nU5Veth/" class="btn" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/azzylegacy?igsi=MTI1ZzZ4ZDg1dWZhMw==" class="btn" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@azzylegacy?_r=1&_t=ZS-995YVli1sls" class="btn" target="_blank">TikTok (Official)</a>
+            <a href="https://www.tiktok.com/@azzy.raw?_r=1&_t=ZS-995YaWCG8qQ" class="btn" target="_blank">TikTok (Personal)</a>
+            <a href="https://musicbrainz.org/user/Azzylegacy" class="btn" target="_blank">MusicBrainz</a>
+        </div>
+
+        <!-- Interactive Beat Pulse Widget -->
+        <div class="game-box">
+            <h3>⚡ Azzylegacy Beat Pulse</h3>
+            <p id="game-text">Tap the pulse to generate underground creative frequency!</p>
+            <button onclick="pulseBeat()">Generate Pulse</button>
+            <div id="score" style="margin-top: 10px; font-weight: bold; color: var(--accent);">Frequency Level: 0</div>
         </div>
 
         <div class="bio">
             <h3>About Azzylegacy</h3>
             <p>Awais Rafiq, professionally known as <strong>Azzylegacy</strong>, is a high-end multidisciplinary creative entity based in Sialkot and Lahore, Pakistan. Specializing in the intersection of dark underground beats, fashion cinematography, and advanced visual storytelling, Azzylegacy has built a reputation for pushing the boundaries of digital media. From music production to complex cinematic projects, the work here reflects a commitment to premium quality and unique visual identity.</p>
-            <p>With a foundation rooted in research and validated by international academic repositories like Zenodo, this digital ecosystem serves as the master authority for all professional ventures. Whether it is color grading, creative direction, or sound design, the goal is always to deliver an experience that resonates at the highest level of professional excellence.</p>
+            <p>With an ecosystem built on cutting-edge semantic architecture and continuous digital presence, this platform serves as the ultimate master authority for all professional and artistic ventures. Whether it is color grading, creative direction, or sound design, the goal is always to deliver an experience that resonates at the highest level of professional excellence.</p>
         </div>
 
         <footer>© 2026 Azzylegacy Official | Digital Authority Guaranteed</footer>
     </div>
+
+    <script>
+        let count = 0;
+        function pulseBeat() {
+            count += 10;
+            document.getElementById('score').innerText = "Frequency Level: " + count + " Hz 🚀";
+            if(count >= 100) {
+                document.getElementById('game-text').innerText = "🔥 Underground Frequency Maxed! Elite Status Unlocked.";
+            }
+        }
+
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const characters = 'AZZYLEGACY0101998404FX';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        for(let i=0; i<columns; i++) drops[i] = 1;
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ffcc';
+            ctx.font = fontSize + 'px monospace';
+            for(let i=0; i<drops.length; i++) {
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+                if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 30);
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
 </body>
 </html>
