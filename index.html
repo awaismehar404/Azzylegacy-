@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#020404">
+<!-- Google Site Verification Tag - Added Here -->
+<meta name="google-site-verification" content="eBCkRFD3uRlLpGlCgYMXUrN8iUlgaznrzWO8VZxZZ7g" />
 <title>Azzylegacy | Awais Rafiq | Official Digital Hub</title>
 
 <!-- Optimized & Clean SEO Backend Schema -->
@@ -833,72 +835,4 @@ class AzzyPanel {
         if (data.heroSubtitle) document.getElementById('heroSubtitle').value = data.heroSubtitle;
         if (data.aboutText) document.getElementById('aboutText').value = data.aboutText;
         if (data.contactHeading) document.getElementById('contactHeading').value = data.contactHeading;
-        if (data.contactSubtext) document.getElementById('contactSubtext').value = data.contactSubtext;
-      }
-    } catch (e) {
-      console.log("No custom saved data found.");
-    }
-  }
-
-  saveContent(isAuto = false) {
-    const data = {
-      heroTitle: document.getElementById('heroTitle').value,
-      heroSubtitle: document.getElementById('heroSubtitle').value,
-      aboutText: document.getElementById('aboutText').value,
-      contactHeading: document.getElementById('contactHeading').value,
-      contactSubtext: document.getElementById('contactSubtext').value
-    };
-    
-    localStorage.setItem('azzylegacy_content', JSON.stringify(data));
-    
-    document.getElementById('heroDisplay').innerHTML = data.heroTitle;
-    document.getElementById('heroSubDisplay').innerText = data.heroSubtitle;
-    document.getElementById('aboutDisplay').innerText = data.aboutText;
-    document.getElementById('contactHeadingDisplay').innerText = data.contactHeading;
-    document.getElementById('contactSubDisplay').innerText = data.contactSubtext;
-
-    if (!isAuto) {
-      this.showStatus('Saved successfully!', 'success');
-    }
-  }
-
-  resetContent() {
-    localStorage.removeItem('azzylegacy_content');
-    location.reload();
-  }
-
-  showStatus(msg, type) {
-    const el = document.getElementById('statusMsg');
-    el.textContent = msg;
-    el.className = `status-msg show ${type}`;
-    setTimeout(() => el.classList.remove('show'), 3000);
-  }
-
-  initVisitorCounter() {
-    let count = localStorage.getItem('page_visits');
-    if (!count) {
-      count = Math.floor(Math.random() * 50) + 120;
-    } else {
-      count = parseInt(count) + 1;
-    }
-    localStorage.setItem('page_visits', count);
-    document.getElementById('visitorCounter').classList.add('show');
-    document.getElementById('visitorCount').innerText = count;
-  }
-  
-  setupAccordions() {
-    document.querySelectorAll('.serviceHead').forEach(header => {
-      header.addEventListener('click', () => {
-        header.parentElement.classList.toggle('open');
-      });
-    });
-  }
-}
-
-// Run the panel system on load
-document.addEventListener('DOMContentLoaded', () => {
-  new AzzyPanel();
-});
-</script>
-</body>
-</html>
+        i
