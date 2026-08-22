@@ -1,33 +1,96 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
 # ==============================================
 # 1. MAIN PERSON (Azzylegacy / Awais Rafiq)
 # ==============================================
 <https://awaismehar404.github.io/Azzylegacy-/>
-    a schema:Person, schema:MusicGroup, schema:Photographer ;
+    a schema:Person, 
+      schema:MusicGroup, 
+      schema:Photographer, 
+      schema:CreativeWork ;
+    
+    # ---- BASIC INFO ----
     schema:name "Azzylegacy" ;
     schema:alternateName "Awais Rafiq" ;
-    schema:description "Music Producer, Cinematographer, and Visual Storyteller from Pakistan. Specializing in Hip Hop beats, cinematic drills, and high-end photography."@en ;
-    schema:jobTitle "Music Producer", "Cinematographer", "Photographer", "Video Editor" ;
-    schema:knowsAbout "Music Production", "Cinematography", "Photography", "Video Editing", "Beat Making" ;
+    schema:additionalName "Awais" ;
+    schema:familyName "Rafiq" ;
+    schema:description """Azzylegacy is a multi-talented Music Producer, Cinematographer, 
+                          and Photographer from Pakistan. Specializes in Hip Hop beats, 
+                          Drill music, Event Photography (Weddings, Birthdays, Bridal Shoots), 
+                          and Commercial Videography."""@en ;
+    
+    # ---- PROFESSIONAL TITLES ----
+    schema:jobTitle "Music Producer", 
+                    "Cinematographer", 
+                    "Photographer", 
+                    "Video Editor",
+                    "Event Photographer",
+                    "Wedding Cinematographer",
+                    "Bridal Shoot Specialist" ;
+    
+    # ---- KNOWLEDGE DOMAINS ----
+    schema:knowsAbout "Music Production", 
+                      "Cinematography", 
+                      "Photography", 
+                      "Event Photography",
+                      "Wedding Photography",
+                      "Bridal Photography",
+                      "Birthday Photography",
+                      "Video Editing",
+                      "Beat Making",
+                      "FL Studio",
+                      "Adobe Premiere Pro",
+                      "DaVinci Resolve",
+                      "Adobe Lightroom" ;
+    
+    # ---- GENRES ----
+    schema:genre "Hip Hop", 
+                 "Drill", 
+                 "Rap", 
+                 "Trap", 
+                 "Lo-fi",
+                 "Event Photography",
+                 "Wedding Cinematography",
+                 "Portrait Photography" ;
+    
+    # ---- LOCATION ----
     schema:homeLocation [
         a schema:Place ;
         schema:name "Pakistan" ;
         schema:address [
             a schema:PostalAddress ;
-            schema:addressCountry "PK"
-        ]
+            schema:addressCountry "PK" ;
+            schema:addressRegion "Punjab" ;
+            schema:addressLocality "Lahore"
+        ] ;
+        geo:latitude "31.5204" ;
+        geo:longitude "74.3587"
     ] ;
+    
+    # ---- SOCIAL & WEB ----
     schema:url <https://awaismehar404.github.io/Azzylegacy-/> ;
     schema:sameAs <https://github.com/awaismehar404> ,
                   <https://www.instagram.com/Azzylegacy> ,
                   <https://www.tiktok.com/@Azzylegacy> ,
                   <https://www.youtube.com/@Azzylegacy> ,
-                  <https://soundcloud.com/azzylegacy> ;
+                  <https://soundcloud.com/azzylegacy> ,
+                  <https://www.facebook.com/Azzylegacy> ,
+                  <https://www.linkedin.com/in/azzylegacy> ;
+    
+    # ---- PROFILE IMAGES ----
+    schema:image <https://awaismehar404.github.io/Azzylegacy-/images/profile.jpg> ;
+    schema:logo <https://awaismehar404.github.io/Azzylegacy-/images/logo.png> ;
+    
+    # ---- PERSONAL INFO ----
     schema:birthDate "1998-10-25"^^xsd:date ;
-    schema:nationality <http://id.loc.gov/vocabulary/countries/pk> .
+    schema:nationality <http://id.loc.gov/vocabulary/countries/pk> ;
+    schema:gender "Male" ;
+    schema:telephone "+92-300-1234567" ;
+    schema:email "azzylegacy@protonmail.com" .
 
 # ==============================================
 # 2. VIDEOGRAPHY / CINEMATOGRAPHY PORTFOLIO
@@ -87,4 +150,133 @@
         a schema:DefinedTerm ;
         schema:name "DaVinci Resolve" ;
         schema:description "Cinematic color correction"
+    ] .
+
+# ==============================================
+# 6. EVENT CATEGORIES: BIRTHDAY PHOTOGRAPHY
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/events/birthday>
+    a schema:Event, schema:Photograph ;
+    schema:name "Azzylegacy Birthday Photography Services" ;
+    schema:creator <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:description """Professional birthday photography services. 
+                          Candid moments, cake cutting ceremonies, 
+                          family portraits, and themed birthday shoots."""@en ;
+    schema:eventType "Birthday Party", "Birthday Shoot" ;
+    schema:audience [
+        a schema:Audience ;
+        schema:audienceType "Children", "Teenagers", "Adults"
+    ] ;
+    schema:offers [
+        a schema:Offer ;
+        schema:name "Birthday Photography Package" ;
+        schema:price "15000" ;
+        schema:priceCurrency "PKR" ;
+        schema:availability <http://schema.org/InStock>
+    ] .
+
+# ==============================================
+# 7. EVENT CATEGORIES: WEDDING PHOTOGRAPHY
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/events/wedding>
+    a schema:Event, schema:Photograph, schema:VideoObject ;
+    schema:name "Azzylegacy Wedding Cinematography & Photography" ;
+    schema:creator <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:description """Premium wedding photography and cinematic 
+                          videography services. Includes pre-wedding shoots, 
+                          mehndi, baraat, walima, and bridal portraits."""@en ;
+    schema:eventType "Wedding", "Marriage", "Nikkah" ;
+    schema:audience [
+        a schema:Audience ;
+        schema:audienceType "Couples", "Families"
+    ] ;
+    schema:offers [
+        a schema:Offer ;
+        schema:name "Complete Wedding Package" ;
+        schema:price "85000" ;
+        schema:priceCurrency "PKR" ;
+        schema:availability <http://schema.org/InStock>
+    ], [
+        a schema:Offer ;
+        schema:name "Bridal Shoot Only" ;
+        schema:price "25000" ;
+        schema:priceCurrency "PKR" ;
+        schema:availability <http://schema.org/InStock>
+    ] .
+
+# ==============================================
+# 8. EVENT CATEGORIES: BRIDAL SHOOT (Specialized)
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/events/bridal>
+    a schema:Event, schema:Photograph ;
+    schema:name "Azzylegacy Bridal Shoot Specialist" ;
+    schema:creator <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:description """Luxury bridal photography sessions. 
+                          Traditional and modern bridal portraits, 
+                          makeup coverage, and creative pre-wedding shoots."""@en ;
+    schema:eventType "Bridal Shoot", "Pre-Wedding" ;
+    schema:audience [
+        a schema:Audience ;
+        schema:audienceType "Brides", "Grooms"
+    ] ;
+    schema:offers [
+        a schema:Offer ;
+        schema:name "Bridal Portrait Session" ;
+        schema:price "30000" ;
+        schema:priceCurrency "PKR" ;
+        schema:availability <http://schema.org/InStock>
+    ] .
+
+# ==============================================
+# 9. EVENT CATEGORIES: GENERAL EVENTS
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/events/general>
+    a schema:Event, schema:Photograph, schema:VideoObject ;
+    schema:name "Azzylegacy Event Photography & Videography" ;
+    schema:creator <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:description """Full-service event photography and cinematography 
+                          for corporate events, concerts, festivals, 
+                          and private gatherings."""@en ;
+    schema:eventType "Corporate Event", "Concert", "Festival", "Private Party" ;
+    schema:offers [
+        a schema:Offer ;
+        schema:name "Event Coverage" ;
+        schema:price "35000" ;
+        schema:priceCurrency "PKR" ;
+        schema:availability <http://schema.org/InStock>
+    ] .
+
+# ==============================================
+# 10. PORTFOLIO COLLECTION
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/portfolio>
+    a schema:Collection, schema:CreativeWork ;
+    schema:name "Azzylegacy Complete Portfolio" ;
+    schema:creator <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:description "Complete collection of photography, videography, and music work"@en ;
+    schema:hasPart <https://awaismehar404.github.io/Azzylegacy-/events/wedding> ,
+                   <https://awaismehar404.github.io/Azzylegacy-/events/bridal> ,
+                   <https://awaismehar404.github.io/Azzylegacy-/events/birthday> ,
+                   <https://awaismehar404.github.io/Azzylegacy-/events/general> ,
+                   <https://awaismehar404.github.io/Azzylegacy-/music> ,
+                   <https://awaismehar404.github.io/Azzylegacy-/videography> .
+
+# ==============================================
+# 11. REVIEWS & SOCIAL PROOF
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/reviews>
+    a schema:Review ;
+    schema:itemReviewed <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:reviewBody """Azzylegacy captured our wedding beautifully! 
+                         The cinematic style and attention to detail was 
+                         outstanding. Highly recommended!"""@en ;
+    schema:author [
+        a schema:Person ;
+        schema:name "Ahmed Khan"
+    ] ;
+    schema:datePublished "2024-05-20"^^xsd:date ;
+    schema:reviewRating [
+        a schema:Rating ;
+        schema:ratingValue "5" ;
+        schema:bestRating "5"
     ] .
