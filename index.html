@@ -64,6 +64,8 @@
   --cyan: #00ffd5;
   --white: #f4fffc;
   --line: rgba(0, 255, 213, .15);
+  --danger: #ff4757;
+  --success: #2ed573;
 }
 
 * {
@@ -83,6 +85,175 @@ body {
   font-family: Inter, sans-serif;
   overflow-x: hidden;
   padding-bottom: 80px;
+}
+
+/* Admin Panel Styles */
+.admin-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(6, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  width: 320px;
+  max-height: 80vh;
+  overflow-y: auto;
+  transform: translateY(120%);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.admin-panel.active {
+  transform: translateY(0);
+}
+
+.admin-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--cyan);
+  color: #00100c;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 255, 213, 0.3);
+}
+
+.admin-toggle:hover {
+  transform: scale(1.1);
+}
+
+.admin-toggle.closed {
+  background: var(--danger);
+  color: white;
+}
+
+.admin-panel h3 {
+  color: var(--cyan);
+  font-size: 14px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  font-family: "Space Mono", monospace;
+}
+
+.admin-panel label {
+  display: block;
+  font-size: 10px;
+  color: #89a6a1;
+  margin: 10px 0 5px;
+  font-family: "Space Mono", monospace;
+  letter-spacing: 1px;
+}
+
+.admin-panel input,
+.admin-panel textarea {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+}
+
+.admin-panel textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.admin-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+}
+
+.admin-btn.save {
+  background: var(--cyan);
+  color: #00100c;
+}
+
+.admin-btn.reset {
+  background: var(--danger);
+  color: white;
+}
+
+.admin-btn.close {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--white);
+}
+
+.admin-panel .status-msg {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 10px;
+  display: none;
+  font-family: "Space Mono", monospace;
+}
+
+.admin-panel .status-msg.show {
+  display: block;
+}
+
+.admin-panel .status-msg.success {
+  background: rgba(46, 213, 115, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.admin-panel .status-msg.error {
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+/* Visitor counter */
+.visitor-counter {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(6, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  color: #89a6a1;
+  letter-spacing: 1px;
+  display: none;
+  z-index: 9998;
+}
+
+.visitor-counter.show {
+  display: block;
+}
+
+.visitor-counter b {
+  color: var(--cyan);
 }
 
 .wrap {
@@ -226,12 +397,22 @@ nav {
   text-align: center;
   font: 700 10px "Space Mono";
   letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: rgba(0, 255, 213, 0.05);
+  transform: translateY(-2px);
 }
 
 .btn.primary {
   background: var(--cyan);
   color: #00100c;
   border-color: var(--cyan);
+}
+
+.btn.primary:hover {
+  background: #00e6bf;
 }
 
 section {
@@ -289,6 +470,11 @@ section {
   background: var(--panel);
   margin: 8px 0;
   overflow: hidden;
+  transition: all 0.3s;
+}
+
+.service:hover {
+  border-color: rgba(0, 255, 213, 0.3);
 }
 
 .serviceHead {
@@ -346,6 +532,12 @@ section {
   text-decoration: none;
   color: white;
   background: var(--panel);
+  transition: all 0.3s;
+}
+
+.socialCard:hover {
+  border-color: var(--cyan);
+  transform: translateY(-2px);
 }
 
 .socialIcon {
@@ -421,6 +613,43 @@ footer {
 </head>
 
 <body>
+
+<!-- Admin Toggle Button -->
+<button class="admin-toggle" id="adminToggle" aria-label="Toggle Admin Panel">⚙️</button>
+
+<!-- Admin Panel -->
+<div class="admin-panel" id="adminPanel">
+  <h3>⚙️ ADMIN PANEL</h3>
+  
+  <label>Hero Title</label>
+  <input type="text" id="heroTitle" value="CREATE.<br><span>CAPTURE.</span><br>LEAVE A LEGACY.">
+  
+  <label>Hero Subtitle</label>
+  <textarea id="heroSubtitle">Azzylegacy is the creative identity of Awais Rafiq — building cinematic visuals, photography, sound and digital experiences from Sialkot & Lahore, Pakistan.</textarea>
+  
+  <label>About Section</label>
+  <textarea id="aboutText">I work across photography, cinematic videography, editing, color grading and sound design with a dark, cinematic identity.</textarea>
+  
+  <label>Contact Heading</label>
+  <input type="text" id="contactHeading" value="Let's build something legendary.">
+  
+  <label>Contact Subtext</label>
+  <input type="text" id="contactSubtext" value="Projects, collaborations, or creative work.">
+  
+  <div class="admin-actions">
+    <button class="admin-btn save" id="saveContent">💾 SAVE</button>
+    <button class="admin-btn reset" id="resetContent">↺ RESET</button>
+    <button class="admin-btn close" id="closePanel">✕ CLOSE</button>
+  </div>
+  
+  <div class="status-msg" id="statusMsg"></div>
+</div>
+
+<!-- Visitor Counter -->
+<div class="visitor-counter" id="visitorCounter">
+  👁️ VISITORS: <b id="visitorCount">0</b>
+</div>
+
 <div class="wrap">
 
 <nav>
@@ -429,8 +658,8 @@ footer {
 </nav>
 
 <header class="hero" id="home">
-  <h1>CREATE.<br><span>CAPTURE.</span><br>LEAVE A LEGACY.</h1>
-  <p class="heroText">Azzylegacy is the creative identity of Awais Rafiq &mdash; building cinematic visuals, photography, sound and digital experiences from Sialkot & Lahore, Pakistan.</p>
+  <h1 id="heroDisplay">CREATE.<br><span>CAPTURE.</span><br>LEAVE A LEGACY.</h1>
+  <p class="heroText" id="heroSubDisplay">Azzylegacy is the creative identity of Awais Rafiq — building cinematic visuals, photography, sound and digital experiences from Sialkot & Lahore, Pakistan.</p>
 
   <div class="holo">
     <div class="orbit"><div class="az">AZ</div></div>
@@ -473,7 +702,7 @@ footer {
 <section>
   <div class="label">// ABOUT</div>
   <h2 class="sectionTitle">Visuals are the language.</h2>
-  <p class="sectionDesc">I work across photography, cinematic videography, editing, color grading and sound design with a dark, cinematic identity.</p>
+  <p class="sectionDesc" id="aboutDisplay">I work across photography, cinematic videography, editing, color grading and sound design with a dark, cinematic identity.</p>
 </section>
 
 <section id="services">
@@ -510,25 +739,166 @@ footer {
 
 <section id="contact">
   <div class="contact">
-    <h2>Let's build something legendary.</h2>
-    <p>Projects, collaborations, or creative work.</p>
+    <h2 id="contactHeadingDisplay">Let's build something legendary.</h2>
+    <p id="contactSubDisplay">Projects, collaborations, or creative work.</p>
     <a class="btn primary" href="https://linktr.ee/azzylegacy" target="_blank">INITIATE CONTACT ↗</a>
   </div>
 </section>
 
 <footer>
   AZZYLEGACY // AWAIS RAFIQ<br>
-  &copy; 2016 &mdash; 2026
+  &copy; 2016 — 2026
 </footer>
 
 </div>
 
 <script>
-  document.querySelectorAll('.serviceHead').forEach(header => {
-    header.addEventListener('click', () => {
-      header.parentElement.classList.toggle('open');
+// ============================================
+// ADMIN PANEL & SYSTEM LOGIC
+// ============================================
+
+class AzzyPanel {
+  constructor() {
+    this.init();
+  }
+  
+  init() {
+    this.loadContent();
+    this.setupEvents();
+    this.initVisitorCounter();
+    this.setupAdminToggle();
+    this.setupAutoSave();
+    this.setupAccordions();
+  }
+  
+  setupEvents() {
+    document.getElementById('saveContent').addEventListener('click', () => {
+      this.saveContent();
     });
-  });
+    
+    document.getElementById('resetContent').addEventListener('click', () => {
+      this.resetContent();
+    });
+    
+    document.getElementById('closePanel').addEventListener('click', () => {
+      this.togglePanel(false);
+    });
+  }
+  
+  setupAdminToggle() {
+    const toggle = document.getElementById('adminToggle');
+    let isOpen = false;
+    
+    toggle.addEventListener('click', () => {
+      isOpen = !isOpen;
+      this.togglePanel(isOpen);
+    });
+  }
+  
+  togglePanel(open) {
+    const panel = document.getElementById('adminPanel');
+    const toggle = document.getElementById('adminToggle');
+    
+    panel.classList.toggle('active', open);
+    toggle.classList.toggle('closed', open);
+    toggle.textContent = open ? '✕' : '⚙️';
+  }
+  
+  setupAutoSave() {
+    let timeout;
+    const inputs = document.querySelectorAll('#adminPanel input, #adminPanel textarea');
+    
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          this.saveContent(true);
+        }, 2000);
+      });
+    });
+  }
+  
+  loadContent() {
+    try {
+      const saved = localStorage.getItem('azzylegacy_content');
+      if (saved) {
+        const data = JSON.parse(saved);
+        if (data.heroTitle) document.getElementById('heroDisplay').innerHTML = data.heroTitle;
+        if (data.heroSubtitle) document.getElementById('heroSubDisplay').innerText = data.heroSubtitle;
+        if (data.aboutText) document.getElementById('aboutDisplay').innerText = data.aboutText;
+        if (data.contactHeading) document.getElementById('contactHeadingDisplay').innerText = data.contactHeading;
+        if (data.contactSubtext) document.getElementById('contactSubDisplay').innerText = data.contactSubtext;
+        
+        if (data.heroTitle) document.getElementById('heroTitle').value = data.heroTitle;
+        if (data.heroSubtitle) document.getElementById('heroSubtitle').value = data.heroSubtitle;
+        if (data.aboutText) document.getElementById('aboutText').value = data.aboutText;
+        if (data.contactHeading) document.getElementById('contactHeading').value = data.contactHeading;
+        if (data.contactSubtext) document.getElementById('contactSubtext').value = data.contactSubtext;
+      }
+    } catch (e) {
+      console.log("No custom saved data found.");
+    }
+  }
+
+  saveContent(isAuto = false) {
+    const data = {
+      heroTitle: document.getElementById('heroTitle').value,
+      heroSubtitle: document.getElementById('heroSubtitle').value,
+      aboutText: document.getElementById('aboutText').value,
+      contactHeading: document.getElementById('contactHeading').value,
+      contactSubtext: document.getElementById('contactSubtext').value
+    };
+    
+    localStorage.setItem('azzylegacy_content', JSON.stringify(data));
+    
+    document.getElementById('heroDisplay').innerHTML = data.heroTitle;
+    document.getElementById('heroSubDisplay').innerText = data.heroSubtitle;
+    document.getElementById('aboutDisplay').innerText = data.aboutText;
+    document.getElementById('contactHeadingDisplay').innerText = data.contactHeading;
+    document.getElementById('contactSubDisplay').innerText = data.contactSubtext;
+
+    if (!isAuto) {
+      this.showStatus('Saved successfully!', 'success');
+    }
+  }
+
+  resetContent() {
+    localStorage.removeItem('azzylegacy_content');
+    location.reload();
+  }
+
+  showStatus(msg, type) {
+    const el = document.getElementById('statusMsg');
+    el.textContent = msg;
+    el.className = `status-msg show ${type}`;
+    setTimeout(() => el.classList.remove('show'), 3000);
+  }
+
+  initVisitorCounter() {
+    let count = localStorage.getItem('page_visits');
+    if (!count) {
+      count = Math.floor(Math.random() * 50) + 120;
+    } else {
+      count = parseInt(count) + 1;
+    }
+    localStorage.setItem('page_visits', count);
+    document.getElementById('visitorCounter').classList.add('show');
+    document.getElementById('visitorCount').innerText = count;
+  }
+  
+  setupAccordions() {
+    document.querySelectorAll('.serviceHead').forEach(header => {
+      header.addEventListener('click', () => {
+        header.parentElement.classList.toggle('open');
+      });
+    });
+  }
+}
+
+// Run the panel system on load
+document.addEventListener('DOMContentLoaded', () => {
+  new AzzyPanel();
+});
 </script>
 </body>
 </html>
