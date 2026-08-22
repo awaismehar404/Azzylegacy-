@@ -1,0 +1,365 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#person",
+      "name": "Azzylegacy",
+      "alternateName": "Awais Rafiq",
+      "additionalName": "Awais",
+      "familyName": "Rafiq",
+      "description": "Azzylegacy is a multi-talented Music Producer, Cinematographer, and Photographer from Lahore, Pakistan. Specializes in Hip Hop beats, Drill music, Event Photography (Weddings, Birthdays, Bridal Shoots), and Commercial Videography.",
+      "url": "https://awaismehar404.github.io/Azzylegacy-/",
+      "image": "https://awaismehar404.github.io/Azzylegacy-/images/profile.jpg",
+      "logo": "https://awaismehar404.github.io/Azzylegacy-/images/logo.png",
+      "jobTitle": [
+        "Music Producer",
+        "Cinematographer",
+        "Photographer",
+        "Video Editor",
+        "Event Photographer",
+        "Wedding Cinematographer",
+        "Bridal Shoot Specialist"
+      ],
+      "knowsAbout": [
+        "Music Production",
+        "Cinematography",
+        "Photography",
+        "Event Photography",
+        "Wedding Photography",
+        "Bridal Photography",
+        "Birthday Photography",
+        "Video Editing",
+        "Beat Making",
+        "FL Studio",
+        "Adobe Premiere Pro",
+        "DaVinci Resolve",
+        "Adobe Lightroom"
+      ],
+      "genre": [
+        "Hip Hop",
+        "Drill",
+        "Rap",
+        "Trap",
+        "Lo-fi",
+        "Event Photography",
+        "Wedding Cinematography",
+        "Portrait Photography"
+      ],
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Pakistan",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "PK",
+          "addressRegion": "Punjab",
+          "addressLocality": "Lahore"
+        },
+        "latitude": "31.5204",
+        "longitude": "74.3587"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lahore",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      },
+      "birthDate": "1998-10-25",
+      "gender": "Male",
+      "telephone": "+92-300-1234567",
+      "email": "azzylegacy@protonmail.com",
+      "nationality": {
+        "@type": "Country",
+        "name": "Pakistan"
+      },
+      "sameAs": [
+        "https://github.com/awaismehar404",
+        "https://www.instagram.com/Azzylegacy",
+        "https://www.tiktok.com/@Azzylegacy",
+        "https://www.youtube.com/@Azzylegacy",
+        "https://soundcloud.com/azzylegacy",
+        "https://www.facebook.com/Azzylegacy.official",
+        "https://www.linkedin.com/in/azzylegacy",
+        "https://twitter.com/Azzylegacy",
+        "https://www.snapchat.com/add/azzylegacy"
+      ]
+    },
+    {
+      "@type": "MusicGroup",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#musicgroup",
+      "name": "Azzylegacy Beats",
+      "genre": ["Hip Hop", "Drill", "Rap", "Trap", "Lo-fi"],
+      "url": "https://soundcloud.com/azzylegacy",
+      "sameAs": "https://www.youtube.com/@Azzylegacy",
+      "description": "Professional beat production and music recording services specializing in Hip Hop and Drill music."
+    },
+    {
+      "@type": ["MusicRecording", "MusicAlbum"],
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#music",
+      "name": "Azzylegacy Beats Vol.1",
+      "byArtist": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "genre": ["Hip Hop", "Drill", "Rap", "Trap"],
+      "inLanguage": "en",
+      "duration": "PT3M45S",
+      "datePublished": "2024-01-15",
+      "url": "https://soundcloud.com/azzylegacy",
+      "image": "https://awaismehar404.github.io/Azzylegacy-/music/album-art.jpg",
+      "recordLabel": "Independent"
+    },
+    {
+      "@type": ["CreativeWork", "VideoObject"],
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#videography",
+      "name": "Azzylegacy Cinematography Reel",
+      "creator": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "description": "Professional drone shots, cinematic videos, commercial music visuals, and wedding cinematography.",
+      "genre": ["Cinematography", "Drill Videos", "Commercial", "Wedding Cinematography"],
+      "videoQuality": "4K",
+      "uploadDate": "2024-01-01",
+      "contentUrl": "https://www.youtube.com/@Azzylegacy",
+      "duration": "PT5M30S"
+    },
+    {
+      "@type": ["Photograph", "ImageObject"],
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#photography",
+      "name": "Azzylegacy Photography Portfolio",
+      "creator": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "description": "Portrait, Landscape, Event, Wedding, Bridal, and Birthday Photography from Pakistan.",
+      "copyrightHolder": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "image": "https://awaismehar404.github.io/Azzylegacy-/photography/portfolio.jpg"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#services",
+      "name": "Azzylegacy Media & Production",
+      "provider": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Pakistan"
+      },
+      "serviceType": ["Cinematography", "Photography", "Music Production", "Video Editing"],
+      "priceRange": "PKR 15,000 - 85,000",
+      "description": "Professional media production services including wedding cinematography, photography, and music production.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Media & Production Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-birthday",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Birthday Photography Package",
+              "description": "Complete birthday photography services including candid moments, cake cutting, family portraits, and themed shoots."
+            },
+            "price": "15000",
+            "priceCurrency": "PKR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2024-01-01",
+            "priceValidUntil": "2025-12-31"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-wedding",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Complete Wedding Cinematography Package",
+              "description": "Premium wedding photography and cinematic videography including pre-wedding, mehndi, baraat, walima, and bridal portraits."
+            },
+            "price": "85000",
+            "priceCurrency": "PKR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2024-01-01",
+            "priceValidUntil": "2025-12-31"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-bridal",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bridal Portrait Session",
+              "description": "Luxury bridal photography sessions, traditional and modern bridal portraits, makeup coverage, and creative pre-wedding shoots."
+            },
+            "price": "30000",
+            "priceCurrency": "PKR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2024-01-01",
+            "priceValidUntil": "2025-12-31"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-event",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Event Photography Coverage",
+              "description": "Full-service event photography and cinematography for corporate events, concerts, festivals, and private gatherings."
+            },
+            "price": "35000",
+            "priceCurrency": "PKR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2024-01-01",
+            "priceValidUntil": "2025-12-31"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#event-birthday",
+      "name": "Birthday Photography Services",
+      "creator": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "description": "Professional birthday photography services including candid moments, cake cutting ceremonies, family portraits, and themed birthday shoots.",
+      "offers": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-birthday"
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#event-wedding",
+      "name": "Wedding Cinematography & Photography",
+      "creator": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "description": "Premium wedding photography and cinematic videography services including pre-wedding shoots, mehndi, baraat, walima, and bridal portraits.",
+      "offers": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-wedding"
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#event-bridal",
+      "name": "Bridal Shoot Specialist",
+      "creator": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "description": "Luxury bridal photography sessions including traditional and modern bridal portraits, makeup coverage, and creative pre-wedding shoots.",
+      "offers": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-bridal"
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#event-general",
+      "name": "General Event Photography & Videography",
+      "creator": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "description": "Full-service event photography and cinematography for corporate events, concerts, festivals, and private gatherings.",
+      "offers": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#offer-event"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#skills",
+      "name": "Azzylegacy's Professional Skills",
+      "description": "Software and tools expertise",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "FL Studio",
+          "description": "Advanced beat making, mixing, and mastering"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Adobe Premiere Pro",
+          "description": "Professional video editing and color grading"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "DaVinci Resolve",
+          "description": "Cinematic color correction and visual effects"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Adobe Lightroom",
+          "description": "Photo editing, color grading, and preset creation"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Final Cut Pro",
+          "description": "Mac-based video editing and post-production"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Pro Tools",
+          "description": "Professional audio recording and mixing"
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#review-1",
+      "itemReviewed": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "reviewBody": "Azzylegacy captured our wedding beautifully! The cinematic style and attention to detail was outstanding. Highly recommended!",
+      "author": {
+        "@type": "Person",
+        "name": "Ahmed Khan"
+      },
+      "datePublished": "2024-05-20",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#review-2",
+      "itemReviewed": {
+        "@id": "https://awaismehar404.github.io/Azzylegacy-/#person"
+      },
+      "reviewBody": "Amazing beats and professional music production! Azzylegacy knows exactly how to create the perfect vibe for any track.",
+      "author": {
+        "@type": "Person",
+        "name": "Zara Malik"
+      },
+      "datePublished": "2024-04-15",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://awaismehar404.github.io/Azzylegacy-/#faq",
+      "name": "Frequently Asked Questions - Azzylegacy",
+      "description": "Common questions about Azzylegacy's services",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Address & Service Area",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Based in Lahore, Punjab, Pakistan, serving clients across the country."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Azzylegacy offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Azzylegacy offers Music Production, Cinematography, Photography, Wedding Photography, Bridal Shoots, Birthday Photography, and Event Coverage services."
+          }
+        }
+      ]
+    }
+  ]
+}
