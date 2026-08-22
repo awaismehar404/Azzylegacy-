@@ -1,0 +1,90 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# ==============================================
+# 1. MAIN PERSON (Azzylegacy / Awais Rafiq)
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/>
+    a schema:Person, schema:MusicGroup, schema:Photographer ;
+    schema:name "Azzylegacy" ;
+    schema:alternateName "Awais Rafiq" ;
+    schema:description "Music Producer, Cinematographer, and Visual Storyteller from Pakistan. Specializing in Hip Hop beats, cinematic drills, and high-end photography."@en ;
+    schema:jobTitle "Music Producer", "Cinematographer", "Photographer", "Video Editor" ;
+    schema:knowsAbout "Music Production", "Cinematography", "Photography", "Video Editing", "Beat Making" ;
+    schema:homeLocation [
+        a schema:Place ;
+        schema:name "Pakistan" ;
+        schema:address [
+            a schema:PostalAddress ;
+            schema:addressCountry "PK"
+        ]
+    ] ;
+    schema:url <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:sameAs <https://github.com/awaismehar404> ,
+                  <https://www.instagram.com/Azzylegacy> ,
+                  <https://www.tiktok.com/@Azzylegacy> ,
+                  <https://www.youtube.com/@Azzylegacy> ,
+                  <https://soundcloud.com/azzylegacy> ;
+    schema:birthDate "1998-10-25"^^xsd:date ;
+    schema:nationality <http://id.loc.gov/vocabulary/countries/pk> .
+
+# ==============================================
+# 2. VIDEOGRAPHY / CINEMATOGRAPHY PORTFOLIO
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/videography>
+    a schema:CreativeWork, schema:VideoObject ;
+    schema:name "Azzylegacy Cinematography Reel" ;
+    schema:creator <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:description "Professional Drone shots, cinematic videos, and commercial music visuals."@en ;
+    schema:genre "Cinematography", "Drill Videos", "Commercial" ;
+    schema:videoQuality "4K" ;
+    schema:uploadDate "2024-01-01"^^xsd:date .
+
+# ==============================================
+# 3. MUSIC RECORDING / BEAT PRODUCTION
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/music>
+    a schema:MusicRecording, schema:MusicAlbum ;
+    schema:name "Azzylegacy Beats Vol.1" ;
+    schema:byArtist <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:genre "Hip Hop", "Drill", "Rap", "Trap" ;
+    schema:inLanguage "en" ;
+    schema:duration "PT3M45S" ;
+    schema:datePublished "2024-01-15"^^xsd:date ;
+    schema:url <https://soundcloud.com/azzylegacy> .
+
+# ==============================================
+# 4. PHOTOGRAPHY PORTFOLIO
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/photography>
+    a schema:Photograph, schema:ImageObject ;
+    schema:name "Azzylegacy Photography Portfolio" ;
+    schema:creator <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:description "Portrait, Landscape, and Event Photography from Pakistan."@en ;
+    schema:copyrightHolder <https://awaismehar404.github.io/Azzylegacy-/> ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/" .
+
+# ==============================================
+# 5. BEAT PRODUCTION SKILLS (SPECIFIC KNOWLEDGE)
+# ==============================================
+<https://awaismehar404.github.io/Azzylegacy-/skills>
+    a schema:DefinedTermSet ;
+    schema:name "Azzylegacy's Production Skills" ;
+    schema:hasDefinedTerm [
+        a schema:DefinedTerm ;
+        schema:name "FL Studio" ;
+        schema:description "Advanced beat making, mixing, and mastering"
+    ], [
+        a schema:DefinedTerm ;
+        schema:name "Adobe Premiere Pro" ;
+        schema:description "Professional video editing and color grading"
+    ], [
+        a schema:DefinedTerm ;
+        schema:name "Adobe Lightroom" ;
+        schema:description "Photo editing and visual enhancement"
+    ], [
+        a schema:DefinedTerm ;
+        schema:name "DaVinci Resolve" ;
+        schema:description "Cinematic color correction"
+    ] .
