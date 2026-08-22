@@ -1,0 +1,310 @@
+# ============================================
+# 🦾 ULTIMATE AI-FIRST ROBOTS.TXT
+# For Azzylegacy - Music Producer | Cinematographer | Photographer
+# Optimized for AI Training, Knowledge Graphs & Search Engines
+# ============================================
+
+# --------------------------------------------
+# 1. DEFAULT RULES (Sab ke liye basic access)
+# --------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Allow: /*.xml$
+Allow: /portfolio/
+Allow: /events/
+Allow: /music/
+Allow: /photography/
+Crawl-delay: 2
+
+# --------------------------------------------
+# 2. GOOGLE ECOSYSTEM (Highest Priority)
+# --------------------------------------------
+User-agent: Googlebot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Allow: /*.xml$
+Crawl-delay: 1
+
+User-agent: Google-Extended
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Allow: /*.xml$
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Crawl-delay: 2
+
+User-agent: Googlebot-Video
+Allow: /
+Allow: /videography/
+Allow: /events/wedding
+Crawl-delay: 3
+
+# --------------------------------------------
+# 3. OPENAI / CHATGPT (Priority Access)
+# --------------------------------------------
+User-agent: GPTBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Allow: /*.xml$
+Crawl-delay: 1
+
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /*.ttl$
+Allow: /portfolio/
+Crawl-delay: 2
+
+# --------------------------------------------
+# 4. ANTHROPIC / CLAUDE (Full Semantic Access)
+# --------------------------------------------
+User-agent: ClaudeBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Allow: /*.xml$
+Allow: /portfolio/
+Allow: /events/
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+# --------------------------------------------
+# 5. PERPLEXITY AI (Knowledge Integration)
+# --------------------------------------------
+User-agent: PerplexityBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Allow: /*.xml$
+Crawl-delay: 1
+
+# --------------------------------------------
+# 6. APPLE / SIRI AI Ecosystem
+# --------------------------------------------
+User-agent: Applebot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+# --------------------------------------------
+# 7. MICROSOFT / BING AI (Full Access)
+# --------------------------------------------
+User-agent: bingbot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Allow: /*.xml$
+Crawl-delay: 1
+
+User-agent: MSNBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+# --------------------------------------------
+# 8. FACEBOOK / META AI (Social & Knowledge)
+# --------------------------------------------
+User-agent: FacebookBot
+Allow: /
+Allow: /*.ttl$
+Allow: /photography/
+Allow: /events/
+Crawl-delay: 3
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /*.ttl$
+Allow: /portfolio/
+Crawl-delay: 3
+
+# --------------------------------------------
+# 9. TWITTER / X AI
+# --------------------------------------------
+User-agent: Twitterbot
+Allow: /
+Allow: /*.ttl$
+Allow: /music/
+Crawl-delay: 3
+
+# --------------------------------------------
+# 10. DUCKDUCKGO AI (Privacy-Focused)
+# --------------------------------------------
+User-agent: DuckDuckBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+User-agent: DuckDuckGo-Favicons-Bot
+Allow: /
+Crawl-delay: 5
+
+# --------------------------------------------
+# 11. BAIDU (Chinese AI Ecosystem)
+# --------------------------------------------
+User-agent: Baiduspider
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 5
+
+User-agent: Baiduspider-image
+Allow: /images/
+Crawl-delay: 5
+
+# --------------------------------------------
+# 12. YANDEX (Russian AI)
+# --------------------------------------------
+User-agent: YandexBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 3
+
+User-agent: YandexImages
+Allow: /images/
+Crawl-delay: 4
+
+# --------------------------------------------
+# 13. EMERGING AI CRAWLERS (Future-Proof)
+# --------------------------------------------
+User-agent: Cohere-AI
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+User-agent: AI21Bot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+User-agent: HF-Bot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+User-agent: ReplitBot
+Allow: /
+Allow: /*.ttl$
+Crawl-delay: 3
+
+User-agent: GitHubCopilot
+Allow: /
+Allow: /*.ttl$
+Crawl-delay: 2
+
+# --------------------------------------------
+# 14. SEARCH ENGINE CRAWLERS (Extended)
+# --------------------------------------------
+User-agent: Bravebot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 2
+
+User-agent: Yeti
+Allow: /
+Allow: /*.ttl$
+Crawl-delay: 5
+
+User-agent: SeznamBot
+Allow: /
+Allow: /*.ttl$
+Crawl-delay: 5
+
+# --------------------------------------------
+# 15. SPECIAL: MEDIA & SOCIAL CRAWLERS
+# --------------------------------------------
+User-agent: Pinterestbot
+Allow: /images/
+Allow: /photography/
+Crawl-delay: 5
+
+User-agent: SnapchatBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: TelegramBot
+Allow: /
+Crawl-delay: 3
+
+User-agent: WhatsApp
+Allow: /
+Crawl-delay: 3
+
+# --------------------------------------------
+# 16. SEO & MONITORING BOTS
+# --------------------------------------------
+User-agent: AhrefsBot
+Allow: /
+Allow: /*.ttl$
+Allow: /*.jsonld$
+Crawl-delay: 3
+
+User-agent: SemrushBot
+Allow: /
+Allow: /*.ttl$
+Crawl-delay: 5
+
+User-agent: rogerbot
+Allow: /
+Allow: /*.ttl$
+Crawl-delay: 5
+
+# --------------------------------------------
+# 17. NO INDEX PATHS (Private/Unfinished Content)
+# --------------------------------------------
+User-agent: *
+Disallow: /drafts/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*?*
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.zip$
+
+# --------------------------------------------
+# 18. SITEMAPS
+# --------------------------------------------
+Sitemap: https://awaismehar404.github.io/Azzylegacy-/sitemap.xml
+
+# ============================================
+# 🚀 END OF FILE
+# Optimized for Maximum AI & Search Engine Visibility
+# Azzylegacy - Music Producer | Cinematographer | Photographer
+# ============================================
