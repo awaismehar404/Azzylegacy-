@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#020505">
+<meta name="theme-color" content="#020404">
 <title>Azzylegacy | Awais Rafiq | Official Digital Hub</title>
 
 <!-- Quantum Master Schema (Backend 100% Restored & Intact) -->
@@ -103,13 +103,10 @@
 
 :root{
   --bg:#020404;
-  --panel:rgba(5,13,12,.78);
+  --panel:#060a0a;
   --cyan:#00ffd5;
-  --cyan2:#00a990;
   --white:#f4fffc;
-  --muted:#71908b;
-  --line:rgba(0,255,213,.18);
-  --glow:0 0 35px rgba(0,255,213,.16);
+  --line:rgba(0,255,213,.15);
 }
 
 *{
@@ -124,51 +121,20 @@ html{
 }
 
 body{
-  background:
-    radial-gradient(circle at 50% 0%,rgba(0,255,213,.08),transparent 35%),
-    #020404;
+  background:var(--bg);
   color:var(--white);
   font-family:Inter,sans-serif;
   overflow-x:hidden;
-  padding-bottom:90px;
+  padding-bottom:80px;
 }
-
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:99;
-  background:linear-gradient(
-    rgba(255,255,255,.018) 1px,
-    transparent 1px
-  );
-  background-size:100% 4px;
-  mix-blend-mode:overlay;
-}
-
-#matrix{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  opacity:.055;
-  pointer-events:none;
-  z-index:0;
-}
-
-/* ================= MAIN ================= */
 
 .wrap{
-  position:relative;
-  z-index:2;
   width:min(680px,100%);
   margin:auto;
   padding:0 16px;
 }
 
 /* NAV */
-
 nav{
   height:70px;
   display:flex;
@@ -178,8 +144,7 @@ nav{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(2,4,4,.72);
-  backdrop-filter:blur(18px);
+  background:#020404;
 }
 
 .logo{
@@ -203,123 +168,66 @@ nav{
   height:6px;
   border-radius:50%;
   background:var(--cyan);
-  box-shadow:0 0 12px var(--cyan);
-  animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-  50%{opacity:.25}
 }
 
 /* HERO */
-
 .hero{
   min-height:calc(100vh - 70px);
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:55px 0 40px;
+  padding:45px 0 30px;
 }
 
 .systemTag{
   font:10px "Space Mono";
   color:var(--cyan);
   letter-spacing:2px;
-  margin-bottom:20px;
+  margin-bottom:16px;
 }
 
 .hero h1{
-  font-size:clamp(44px,13vw,82px);
-  line-height:.9;
-  letter-spacing:-4px;
+  font-size:clamp(42px,12vw,76px);
+  line-height:.95;
+  letter-spacing:-3px;
   font-weight:900;
-  margin-bottom:24px;
+  margin-bottom:20px;
 }
 
 .hero h1 span{
   color:var(--cyan);
-  text-shadow:0 0 35px rgba(0,255,213,.3);
 }
 
 .heroText{
   color:#89a6a1;
   font-size:14px;
-  line-height:1.8;
-  max-width:540px;
+  line-height:1.7;
+  max-width:520px;
 }
 
-/* HOLOGRAM */
-
+/* CARD BOX */
 .holo{
-  margin-top:45px;
-  position:relative;
+  margin-top:35px;
   border:1px solid var(--line);
-  border-radius:28px;
-  min-height:350px;
-  padding:28px;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at center,rgba(0,255,213,.08),transparent 48%),
-    rgba(3,10,9,.7);
-  box-shadow:var(--glow);
-}
-
-.holo:after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  height:1px;
-  background:var(--cyan);
-  opacity:.5;
-  top:0;
-  animation:scan 4s linear infinite;
-}
-
-@keyframes scan{
-  0%{top:0}
-  100%{top:100%}
+  border-radius:20px;
+  padding:24px;
+  background:var(--panel);
 }
 
 .orbit{
-  width:190px;
-  height:190px;
-  margin:5px auto 25px;
+  width:140px;
+  height:140px;
+  margin:10px auto 20px;
   border:1px solid var(--cyan);
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  position:relative;
-  box-shadow:
-    0 0 35px rgba(0,255,213,.12),
-    inset 0 0 35px rgba(0,255,213,.05);
-}
-
-.orbit:before,
-.orbit:after{
-  content:"";
-  position:absolute;
-  border:1px solid rgba(0,255,213,.35);
-  border-radius:50%;
-}
-
-.orbit:before{
-  width:240px;
-  height:80px;
-  transform:rotate(-25deg);
-}
-
-.orbit:after{
-  width:80px;
-  height:240px;
-  transform:rotate(25deg);
 }
 
 .az{
-  font:900 55px Inter;
+  font:900 42px Inter;
   color:var(--cyan);
-  text-shadow:0 0 25px var(--cyan);
 }
 
 .idInfo{
@@ -327,7 +235,7 @@ nav{
 }
 
 .idInfo h2{
-  font-size:27px;
+  font-size:24px;
   letter-spacing:-1px;
 }
 
@@ -335,16 +243,16 @@ nav{
   font:9px "Space Mono";
   color:var(--cyan);
   letter-spacing:2px;
-  margin-top:8px;
+  margin-top:6px;
 }
 
 .idStatus{
   display:flex;
   justify-content:space-between;
   gap:10px;
-  margin-top:28px;
+  margin-top:22px;
   border-top:1px solid var(--line);
-  padding-top:17px;
+  padding-top:15px;
   font:8px "Space Mono";
   color:#63817b;
 }
@@ -354,65 +262,57 @@ nav{
 }
 
 /* BUTTONS */
-
 .actions{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  margin-top:25px;
+  margin-top:22px;
 }
 
 .btn{
   border:1px solid var(--line);
-  background:rgba(0,255,213,.04);
+  background:transparent;
   color:var(--white);
-  padding:15px 13px;
+  padding:14px 12px;
   border-radius:12px;
   text-decoration:none;
   text-align:center;
   font:700 10px "Space Mono";
   letter-spacing:1px;
-  transition:.25s;
 }
 
 .btn.primary{
   background:var(--cyan);
   color:#00100c;
-  box-shadow:0 0 25px rgba(0,255,213,.2);
-}
-
-.btn:active{
-  transform:scale(.97);
+  border-color:var(--cyan);
 }
 
 /* SECTIONS */
-
 section{
-  padding:65px 0 0;
+  padding:55px 0 0;
 }
 
 .label{
   color:var(--cyan);
   font:10px "Space Mono";
   letter-spacing:3px;
-  margin-bottom:18px;
+  margin-bottom:14px;
 }
 
 .sectionTitle{
-  font-size:28px;
+  font-size:26px;
   letter-spacing:-1px;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
 .sectionDesc{
   color:#67817c;
   font-size:12px;
-  line-height:1.7;
-  margin-bottom:22px;
+  line-height:1.6;
+  margin-bottom:18px;
 }
 
-/* STATUS */
-
+/* STATUS GRID */
 .status{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -421,8 +321,8 @@ section{
 
 .stat{
   border:1px solid var(--line);
-  border-radius:14px;
-  padding:18px;
+  border-radius:12px;
+  padding:16px;
   background:var(--panel);
 }
 
@@ -430,7 +330,7 @@ section{
   display:block;
   color:#55736d;
   font:8px "Space Mono";
-  margin-bottom:8px;
+  margin-bottom:6px;
 }
 
 .stat strong{
@@ -439,41 +339,39 @@ section{
 }
 
 /* SERVICES */
-
 .service{
   border:1px solid var(--line);
-  border-radius:18px;
+  border-radius:14px;
   background:var(--panel);
-  margin:10px 0;
+  margin:8px 0;
   overflow:hidden;
-  transition:.3s;
 }
 
 .serviceHead{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px;
+  padding:18px;
   cursor:pointer;
 }
 
 .serviceHead h3{
-  font-size:14px;
+  font-size:13px;
 }
 
 .serviceHead span{
   color:var(--cyan);
-  font:20px "Space Mono";
+  font:18px "Space Mono";
 }
 
 .serviceBody{
   max-height:0;
   overflow:hidden;
-  transition:.4s;
+  transition:.3s;
   color:#718b86;
   font-size:12px;
-  line-height:1.7;
-  padding:0 20px;
+  line-height:1.6;
+  padding:0 18px;
 }
 
 .service.open{
@@ -481,56 +379,52 @@ section{
 }
 
 .service.open .serviceBody{
-  max-height:120px;
-  padding:0 20px 20px;
+  max-height:100px;
+  padding:0 18px 18px;
 }
 
 .service.open .serviceHead span{
   transform:rotate(45deg);
 }
 
-/* PROJECT VAULT */
-
+/* VAULT */
 .vault{
   display:flex;
-  gap:12px;
+  gap:10px;
   overflow-x:auto;
   scroll-snap-type:x mandatory;
-  padding-bottom:10px;
+  padding-bottom:8px;
 }
 
 .vault::-webkit-scrollbar{
-  height:2px;
+  display:none;
 }
 
 .project{
-  min-width:82%;
+  min-width:85%;
   scroll-snap-align:start;
   border:1px solid var(--line);
-  border-radius:20px;
+  border-radius:16px;
   overflow:hidden;
   background:var(--panel);
 }
 
 .projectVisual{
-  height:210px;
-  background:
-    radial-gradient(circle at 50% 40%,rgba(0,255,213,.18),transparent 35%),
-    linear-gradient(135deg,#061412,#010303);
+  height:180px;
+  background:#030606;
   display:flex;
   align-items:center;
   justify-content:center;
-  position:relative;
 }
 
 .projectVisual span{
-  font:12px "Space Mono";
+  font:11px "Space Mono";
   color:var(--cyan);
-  letter-spacing:3px;
+  letter-spacing:2px;
 }
 
 .projectInfo{
-  padding:20px;
+  padding:18px;
 }
 
 .projectCode{
@@ -539,59 +433,52 @@ section{
 }
 
 .projectInfo h3{
-  margin:8px 0;
-  font-size:18px;
+  margin:6px 0;
+  font-size:17px;
 }
 
 .projectInfo p{
   color:#6d8781;
   font-size:11px;
-  line-height:1.6;
+  line-height:1.5;
 }
 
 .projectBtn{
   display:inline-block;
-  margin-top:16px;
+  margin-top:14px;
   color:var(--cyan);
   font:9px "Space Mono";
   text-decoration:none;
   border-bottom:1px solid var(--cyan);
-  padding-bottom:4px;
+  padding-bottom:2px;
 }
 
 /* SOCIAL */
-
 .social{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:9px;
+  gap:8px;
 }
 
 .socialCard{
   border:1px solid var(--line);
-  border-radius:16px;
-  padding:20px 14px;
+  border-radius:14px;
+  padding:18px 12px;
   text-decoration:none;
   color:white;
   background:var(--panel);
-  transition:.25s;
-}
-
-.socialCard:active{
-  transform:scale(.97);
-  border-color:var(--cyan);
 }
 
 .socialIcon{
-  font-size:20px;
-  margin-bottom:13px;
+  font-size:18px;
+  margin-bottom:10px;
 }
 
 .socialCard b{
   color:var(--cyan);
   display:block;
   font:10px "Space Mono";
-  margin-bottom:5px;
+  margin-bottom:4px;
 }
 
 .socialCard span{
@@ -600,26 +487,23 @@ section{
 }
 
 /* TERMINAL */
-
 .terminal{
   border:1px solid var(--line);
-  border-radius:18px;
+  border-radius:14px;
   overflow:hidden;
-  background:#010303;
-  box-shadow:inset 0 0 40px rgba(0,255,213,.025);
+  background:var(--panel);
 }
 
 .termTop{
-  padding:11px 14px;
+  padding:10px 14px;
   border-bottom:1px solid var(--line);
   font:9px "Space Mono";
   color:#56716c;
 }
 
 .termBody{
-  padding:20px;
-  min-height:220px;
-  font:11px/2 "Space Mono";
+  padding:18px;
+  font:11px/1.8 "Space Mono";
   color:#78938d;
 }
 
@@ -628,97 +512,63 @@ section{
 }
 
 /* CONTACT */
-
 .contact{
   border:1px solid var(--cyan);
-  border-radius:22px;
-  padding:30px 20px;
+  border-radius:18px;
+  padding:26px 18px;
   text-align:center;
-  background:
-    radial-gradient(circle at 50% 0,rgba(0,255,213,.13),transparent 55%),
-    var(--panel);
-  box-shadow:0 0 45px rgba(0,255,213,.07);
+  background:var(--panel);
 }
 
 .contact h2{
-  font-size:26px;
-  margin-bottom:10px;
+  font-size:24px;
+  margin-bottom:8px;
 }
 
 .contact p{
   color:#67817c;
   font-size:12px;
-  line-height:1.7;
-  margin-bottom:22px;
+  line-height:1.6;
+  margin-bottom:18px;
 }
 
 /* FOOTER */
-
 footer{
   text-align:center;
-  padding:60px 0 20px;
+  padding:50px 0 10px;
   color:#344944;
   font:8px "Space Mono";
   letter-spacing:1px;
 }
 
-/* DESKTOP */
-
 @media(min-width:800px){
-  .wrap{
-    width:min(900px,100%);
-  }
-  .hero{
-    min-height:850px;
-  }
-  .hero h1{
-    font-size:90px;
-  }
-  .holo{
-    min-height:420px;
-  }
-  .status{
-    grid-template-columns:repeat(4,1fr);
-  }
-  .social{
-    grid-template-columns:repeat(5,1fr);
-  }
-  .project{
-    min-width:45%;
-  }
+  .wrap{ width:min(860px,100%); }
+  .status{ grid-template-columns:repeat(4,1fr); }
+  .social{ grid-template-columns:repeat(5,1fr); }
+  .project{ min-width:45%; }
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="matrix"></canvas>
-
 <div class="wrap">
-
-<!-- ================= NAV ================= -->
 
 <nav>
   <div class="logo">AZZYLEGACY</div>
   <div class="live">
     <i></i>
-    SYSTEM ONLINE
+    ONLINE
   </div>
 </nav>
 
-<!-- ================= HERO ================= -->
-
 <header class="hero" id="home">
-  <div class="systemTag">
-    // DIGITAL CREATOR &bull; VISUAL ARTIST &bull; SOUND DESIGNER
-  </div>
-
+  <div class="systemTag">// DIGITAL CREATOR &bull; VISUAL ARTIST</div>
   <h1>
     CREATE.<br>
     <span>CAPTURE.</span><br>
     LEAVE A LEGACY.
   </h1>
-
   <p class="heroText">
     Azzylegacy is the creative identity of Awais Rafiq &mdash;
     building cinematic visuals, photography, sound and digital
@@ -729,202 +579,111 @@ footer{
     <div class="orbit">
       <div class="az">AZ</div>
     </div>
-
     <div class="idInfo">
       <h2>AZZYLEGACY</h2>
       <p>CREATIVE IDENTITY // 001</p>
     </div>
-
     <div class="idStatus">
-      <div>LOCATION<br><b>PK // SIALKOT & LAHORE</b></div>
-      <div>MODE<br><b>CREATIVE</b></div>
-      <div>STATUS<br><b>ONLINE</b></div>
+      <div>LOCATION<br><b>SIALKOT & LAHORE</b></div>
+      <div>MODE<br><b>ACTIVE</b></div>
     </div>
   </div>
 
   <div class="actions">
-    <a class="btn primary"
-       href="https://linktr.ee/azzylegacy"
-       target="_blank">
-       ENTER HUB ↗
-    </a>
-
-    <a class="btn"
-       href="https://drive.google.com/file/d/13opzb5GGpTH-OTIxTEC-OT7UdrtH6Upu/view?usp=drivesdk"
-       target="_blank">
-       VIEW CV ↗
-    </a>
+    <a class="btn primary" href="https://linktr.ee/azzylegacy" target="_blank">ENTER HUB ↗</a>
+    <a class="btn" href="https://drive.google.com/file/d/13opzb5GGpTH-OTIxTEC-OT7UdrtH6Upu/view?usp=drivesdk" target="_blank">VIEW CV ↗</a>
   </div>
 </header>
-
-<!-- ================= STATUS ================= -->
 
 <section id="about">
   <div class="label">// IDENTITY STATUS</div>
   <div class="status">
-    <div class="stat">
-      <small>CREATOR</small>
-      <strong>Awais Rafiq</strong>
-    </div>
-    <div class="stat">
-      <small>ENTITY</small>
-      <strong>Azzylegacy</strong>
-    </div>
-    <div class="stat">
-      <small>LOCATION</small>
-      <strong>SIALKOT / LAHORE</strong>
-    </div>
-    <div class="stat">
-      <small>SINCE</small>
-      <strong>2016</strong>
-    </div>
+    <div class="stat"><small>CREATOR</small><strong>Awais Rafiq</strong></div>
+    <div class="stat"><small>ENTITY</small><strong>Azzylegacy</strong></div>
+    <div class="stat"><small>LOCATION</small><strong>PK</strong></div>
+    <div class="stat"><small>SINCE</small><strong>2016</strong></div>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-
 <section>
-  <div class="label">// ABOUT THE CREATOR</div>
-  <h2 class="sectionTitle">
-    Visuals are the language.
-  </h2>
+  <div class="label">// ABOUT</div>
+  <h2 class="sectionTitle">Visuals are the language.</h2>
   <p class="sectionDesc">
-    I work across photography, cinematic videography,
-    editing, color grading and sound design &mdash; turning
-    concepts into visual experiences with a dark,
-    cinematic identity.
+    I work across photography, cinematic videography, editing, color grading and sound design with a dark, cinematic identity.
   </p>
 </section>
 
-<!-- ================= SERVICES ================= -->
-
 <section id="services">
   <div class="label">// CREATIVE SYSTEMS</div>
-
   <div class="service">
-    <div class="serviceHead">
-      <h3>01 // CINEMATIC PRODUCTION</h3>
-      <span>+</span>
-    </div>
-    <div class="serviceBody">
-      Cinematic videography, fashion visuals, portraits,
-      reels, commercial content and visual storytelling.
-    </div>
+    <div class="serviceHead"><h3>01 // CINEMATIC PRODUCTION</h3><span>+</span></div>
+    <div class="serviceBody">Cinematic videography, fashion visuals, portraits, reels and commercial storytelling.</div>
   </div>
-
   <div class="service">
-    <div class="serviceHead">
-      <h3>02 // PHOTOGRAPHY</h3>
-      <span>+</span>
-    </div>
-    <div class="serviceBody">
-      Portraits, fashion, events and creative photography
-      with a controlled cinematic visual language.
-    </div>
+    <div class="serviceHead"><h3>02 // PHOTOGRAPHY</h3><span>+</span></div>
+    <div class="serviceBody">Portraits, fashion, events and creative photography with a cinematic visual language.</div>
   </div>
-
   <div class="service">
-    <div class="serviceHead">
-      <h3>03 // COLOR & POST</h3>
-      <span>+</span>
-    </div>
-    <div class="serviceBody">
-      Professional editing, color grading, visual effects
-      and cinematic finishing.
-    </div>
+    <div class="serviceHead"><h3>03 // COLOR & POST</h3><span>+</span></div>
+    <div class="serviceBody">Professional editing, color grading, visual effects and cinematic finishing.</div>
   </div>
-
   <div class="service">
-    <div class="serviceHead">
-      <h3>04 // SOUND DESIGN</h3>
-      <span>+</span>
-    </div>
-    <div class="serviceBody">
-      Dark underground music, sound design and audio
-      identity for visual projects.
-    </div>
+    <div class="serviceHead"><h3>04 // SOUND DESIGN</h3><span>+</span></div>
+    <div class="serviceBody">Dark underground music production, sound design and audio identity.</div>
   </div>
 </section>
-
-<!-- ================= PROJECT VAULT ================= -->
 
 <section id="work">
   <div class="label">// PROJECT VAULT</div>
   <h2 class="sectionTitle">Selected Work</h2>
-  <p class="sectionDesc">
-    Swipe through the creative archive.
-  </p>
+  <p class="sectionDesc">Swipe through the creative archive.</p>
 
   <div class="vault">
     <article class="project">
-      <div class="projectVisual">
-        <span>VISUAL_001</span>
-      </div>
+      <div class="projectVisual"><span>VISUAL_001</span></div>
       <div class="projectInfo">
         <div class="projectCode">PROJECT // 001</div>
         <h3>Cinematic Portrait</h3>
-        <p>Dark cinematic portrait direction, lighting and color treatment.</p>
-        <a href="https://linktr.ee/azzylegacy" target="_blank" class="projectBtn">ACCESS PROJECT ↗</a>
+        <p>Dark cinematic portrait direction and lighting.</p>
+        <a href="https://linktr.ee/azzylegacy" target="_blank" class="projectBtn">ACCESS ↗</a>
       </div>
     </article>
-
     <article class="project">
-      <div class="projectVisual">
-        <span>VISUAL_002</span>
-      </div>
+      <div class="projectVisual"><span>VISUAL_002</span></div>
       <div class="projectInfo">
         <div class="projectCode">PROJECT // 002</div>
         <h3>Fashion Motion</h3>
-        <p>Fashion-focused cinematography, movement and visual storytelling.</p>
-        <a href="https://www.instagram.com/azzylegacy" target="_blank" class="projectBtn">VIEW ON INSTAGRAM ↗</a>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="projectVisual">
-        <span>VISUAL_003</span>
-      </div>
-      <div class="projectInfo">
-        <div class="projectCode">PROJECT // 003</div>
-        <h3>Raw Frames</h3>
-        <p>Behind-the-scenes work, photography, experiments and visual studies.</p>
-        <a href="https://www.instagram.com/azzy.raw" target="_blank" class="projectBtn">OPEN RAW ARCHIVE ↗</a>
+        <p>Fashion-focused cinematography and movement.</p>
+        <a href="https://www.instagram.com/azzylegacy" target="_blank" class="projectBtn">VIEW ↗</a>
       </div>
     </article>
   </div>
 </section>
 
-<!-- ================= SOCIAL ================= -->
-
 <section id="social">
   <div class="label">// SOCIAL PORTALS</div>
   <h2 class="sectionTitle">Connect</h2>
-
   <div class="social">
     <a class="socialCard" href="https://www.instagram.com/azzylegacy" target="_blank">
       <div class="socialIcon">◎</div>
       <b>INSTAGRAM</b>
       <span>@azzylegacy</span>
     </a>
-
     <a class="socialCard" href="https://www.instagram.com/azzy.raw" target="_blank">
       <div class="socialIcon">◉</div>
       <b>RAW ARCHIVE</b>
       <span>@azzy.raw</span>
     </a>
-
     <a class="socialCard" href="https://www.tiktok.com/@azzylegacy" target="_blank">
       <div class="socialIcon">♪</div>
       <b>TIKTOK</b>
       <span>@azzylegacy</span>
     </a>
-
     <a class="socialCard" href="https://www.facebook.com/share/1C9nU5Veth/" target="_blank">
       <div class="socialIcon">f</div>
       <b>FACEBOOK</b>
-      <span>Official Profile</span>
+      <span>Profile</span>
     </a>
-
     <a class="socialCard" href="https://www.snapchat.com/add/azzy_studio" target="_blank">
       <div class="socialIcon">◇</div>
       <b>SNAPCHAT</b>
@@ -933,83 +692,39 @@ footer{
   </div>
 </section>
 
-<!-- ================= TERMINAL ================= -->
-
 <section>
   <div class="label">// SYSTEM TERMINAL</div>
   <div class="terminal">
-    <div class="termTop">
-      AZZYLEGACY@SYSTEM // SECURE CONNECTION
-    </div>
+    <div class="termTop">AZZYLEGACY@SYSTEM</div>
     <div class="termBody">
-      <b>></b> whoami<br>
-      Awais Rafiq // Azzylegacy<br><br>
-      <b>></b> mission<br>
-      CREATE. CAPTURE. BUILD.<br><br>
-      <b>></b> location<br>
-      SIALKOT &rarr; LAHORE &rarr; PAKISTAN<br><br>
-      <b>></b> status<br>
-      <b>CREATIVE ENGINE ONLINE_</b>
+      <b>></b> whoami: Awais Rafiq<br>
+      <b>></b> location: Sialkot & Lahore<br>
+      <b>></b> status: Online
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-
 <section id="contact">
   <div class="contact">
-    <div class="label">// CONNECTION REQUEST</div>
+    <div class="label">// CONTACT</div>
     <h2>Let's build something legendary.</h2>
-    <p>Projects, collaborations, cinematic productions, photography or creative work.</p>
-    <a class="btn primary" href="https://linktr.ee/azzylegacy" target="_blank">
-       INITIATE CONTACT ↗
-    </a>
+    <p>Projects, collaborations, or creative work.</p>
+    <a class="btn primary" href="https://linktr.ee/azzylegacy" target="_blank">INITIATE CONTACT ↗</a>
   </div>
 </section>
 
 <footer>
-  AZZYLEGACY // AWAIS RAFIQ<br><br>
-  &copy; 2016 &mdash; 2026 // ALL SYSTEMS RESERVED
+  AZZYLEGACY // AWAIS RAFIQ<br>
+  &copy; 2016 &mdash; 2026
 </footer>
 
 </div>
 
 <script>
-  // Simple toggle script for accordion services
   document.querySelectorAll('.serviceHead').forEach(header => {
     header.addEventListener('click', () => {
-      const parent = header.parentElement;
-      parent.classList.toggle('open');
+      header.parentElement.classList.toggle('open');
     });
-  });
-
-  // Matrix Background Effect
-  const canvas = document.getElementById('matrix');
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  const characters = 'AZZYLEGACY01019982030FX';
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-  const drops = [];
-  for(let i=0; i<columns; i++) drops[i] = 1;
-
-  function drawMatrix() {
-      ctx.fillStyle = 'rgba(2, 4, 4, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#00ffd5';
-      ctx.font = fontSize + 'px monospace';
-      for(let i=0; i<drops.length; i++) {
-          const text = characters.charAt(Math.floor(Math.random() * characters.length));
-          ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-          if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-          drops[i]++;
-      }
-  }
-  setInterval(drawMatrix, 30);
-  window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
   });
 </script>
 </body>
