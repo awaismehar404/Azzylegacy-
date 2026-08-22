@@ -5,46 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azzylegacy | Awais Rafiq | Official Digital Hub</title>
     <style>
-        :root { --bg: #020202; --accent: #00ffcc; --accent-glow: rgba(0, 255, 204, 0.4); --text: #ffffff; --card: rgba(12, 12, 12, 0.75); --border: rgba(0, 255, 204, 0.2); }
+        :root { 
+            --bg: #010101; 
+            --accent: #00ffcc; 
+            --accent-glow: rgba(0, 255, 204, 0.45); 
+            --text: #ffffff; 
+            --card: rgba(10, 10, 10, 0.7); 
+            --border: rgba(0, 255, 204, 0.3); 
+        }
+        * { box-sizing: border-box; }
         body { background-color: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; margin: 0; padding: 20px; line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 800px; margin: auto; position: relative; z-index: 2; }
-        
-        /* 2030 Cyber-HUD Status Bar */
-        .status-bar { background: rgba(0, 255, 204, 0.03); border: 1px solid var(--border); padding: 10px 18px; border-radius: 10px; font-family: monospace; font-size: 0.75rem; color: var(--accent); text-align: center; margin-bottom: 25px; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; gap: 10px; backdrop-filter: blur(10px); box-shadow: inset 0 0 15px rgba(0,255,204,0.05); }
-        .blinking-dot { width: 8px; height: 8px; background-color: var(--accent); border-radius: 50%; box-shadow: 0 0 12px var(--accent); animation: pulse-dot 1.2s infinite; }
-        @keyframes pulse-dot { 0% { opacity: 0.2; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.2); } 100% { opacity: 0.2; transform: scale(0.9); } }
+        .container { max-width: 800px; margin: auto; position: relative; z-index: 2; animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .hero { text-align: center; padding: 15px 0 5px; }
-        h1 { font-size: 3.5rem; color: var(--accent); margin: 0; letter-spacing: -2px; text-shadow: 0 0 35px var(--accent-glow); font-weight: 900; }
-        .tagline { font-size: 0.85rem; opacity: 0.7; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; font-family: monospace; }
+        /* Cyber-HUD Status Bar */
+        .status-bar { background: rgba(0, 255, 204, 0.04); border: 1px solid var(--border); padding: 12px 20px; border-radius: 12px; font-family: monospace; font-size: 0.75rem; color: var(--accent); text-align: center; margin-bottom: 30px; letter-spacing: 2.5px; display: flex; align-items: center; justify-content: center; gap: 12px; backdrop-filter: blur(15px); box-shadow: inset 0 0 20px rgba(0,255,204,0.08); }
+        .blinking-dot { width: 9px; height: 9px; background-color: var(--accent); border-radius: 50%; box-shadow: 0 0 15px var(--accent); animation: pulse-dot 1.2s infinite; }
+        @keyframes pulse-dot { 0% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.3); } 100% { opacity: 0.2; transform: scale(0.8); } }
+
+        /* Holographic Avatar Frame */
+        .profile-container { text-align: center; margin: 30px 0 20px; }
+        .avatar-frame { width: 110px; height: 110px; margin: 0 auto; border-radius: 50%; background: linear-gradient(145deg, #0d0d0d, #030303); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px var(--accent-glow), inset 0 0 20px rgba(0,255,204,0.2); position: relative; animation: float-avatar 4s ease-in-out infinite; }
+        @keyframes float-avatar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .avatar-frame span { font-size: 2.2rem; font-weight: 900; color: var(--accent); font-family: monospace; text-shadow: 0 0 20px var(--accent); letter-spacing: -1px; }
+
+        .hero { text-align: center; padding: 10px 0 5px; }
+        h1 { font-size: 3.6rem; color: var(--accent); margin: 0; letter-spacing: -2px; text-shadow: 0 0 40px var(--accent-glow); font-weight: 900; }
+        .tagline { font-size: 0.85rem; opacity: 0.75; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; font-family: monospace; }
         
-        /* Futuristic Elite Badge */
-        .elite-badge { background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(5,5,5,0.9)); border: 1px solid var(--border); padding: 12px 28px; border-radius: 40px; display: inline-block; margin: 20px auto; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); box-shadow: 0 0 25px rgba(0,255,204,0.08); backdrop-filter: blur(10px); }
+        /* Elite Badge */
+        .elite-badge { background: linear-gradient(135deg, rgba(20,20,20,0.95), rgba(5,5,5,0.95)); border: 1px solid var(--border); padding: 12px 28px; border-radius: 40px; display: inline-block; margin: 20px auto; font-size: 0.75rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--accent); box-shadow: 0 0 25px rgba(0,255,204,0.1); backdrop-filter: blur(12px); }
         .badge-wrapper { text-align: center; }
 
-        /* 2030 Sci-Fi Interactive Buttons */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 30px 0; }
-        .btn { background: var(--card); color: var(--text); padding: 18px 22px; text-align: center; border-radius: 14px; text-decoration: none; border: 1px solid var(--border); backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(0,255,204,0.15), transparent); transition: 0.5s; }
+        /* Jaw-Dropping Sci-Fi Buttons */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 30px 0; }
+        .btn { background: var(--card); color: var(--text); padding: 19px 24px; text-align: center; border-radius: 16px; text-decoration: none; border: 1px solid var(--border); backdrop-filter: blur(15px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 6px 25px rgba(0,0,0,0.6); }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(0,255,204,0.2), transparent); transition: 0.5s; }
         .btn:hover::before { left: 100%; }
-        .btn:hover { background: rgba(0, 255, 204, 0.1); color: var(--accent); border-color: var(--accent); transform: translateY(-4px) scale(1.02); box-shadow: 0 10px 35px var(--accent-glow); }
-        .btn span { opacity: 0.5; font-size: 0.8rem; font-family: monospace; transition: 0.3s; }
-        .btn:hover span { opacity: 1; color: var(--accent); transform: translateX(3px); }
+        .btn:hover { background: rgba(0, 255, 204, 0.15); color: var(--accent); border-color: var(--accent); transform: translateY(-5px) scale(1.02); box-shadow: 0 12px 40px var(--accent-glow); }
+        .btn span { opacity: 0.7; font-size: 1rem; font-family: monospace; transition: 0.3s; color: var(--accent); }
+        .btn:hover span { opacity: 1; transform: translateX(4px) scale(1.1); }
 
         /* Bio Container */
-        .bio { background: var(--card); padding: 30px; border-radius: 18px; border-left: 4px solid var(--accent); border: 1px solid var(--border); backdrop-filter: blur(15px); margin-top: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-        .bio h3 { margin-top: 0; color: var(--accent); letter-spacing: 2px; font-size: 1.1rem; }
+        .bio { background: var(--card); padding: 35px; border-radius: 20px; border-left: 4px solid var(--accent); border: 1px solid var(--border); backdrop-filter: blur(20px); margin-top: 35px; box-shadow: 0 12px 35px rgba(0,0,0,0.5); }
+        .bio h3 { margin-top: 0; color: var(--accent); letter-spacing: 2.5px; font-size: 1.15rem; }
         
-        /* Interactive Pulse Generator */
-        .game-box { background: rgba(10, 10, 10, 0.8); border: 1px dashed var(--border); padding: 25px; border-radius: 18px; text-align: center; margin-top: 30px; backdrop-filter: blur(10px); }
-        .game-box button { background: var(--accent); color: #000; border: none; padding: 14px 28px; font-weight: 900; border-radius: 10px; cursor: pointer; margin-top: 15px; transition: all 0.3s ease; font-size: 0.9rem; letter-spacing: 1px; box-shadow: 0 0 20px var(--accent-glow); }
-        .game-box button:hover { transform: scale(1.08); box-shadow: 0 0 35px var(--accent); background: #ffffff; color: #000; }
+        /* Cyber-Reactor Pulse Widget */
+        .game-box { background: rgba(8, 8, 8, 0.85); border: 1px dashed var(--border); padding: 30px; border-radius: 20px; text-align: center; margin-top: 35px; backdrop-filter: blur(15px); box-shadow: inset 0 0 25px rgba(0,255,204,0.03); }
+        .game-box button { background: var(--accent); color: #000; border: none; padding: 15px 32px; font-weight: 900; border-radius: 12px; cursor: pointer; margin-top: 18px; transition: all 0.3s ease; font-size: 0.95rem; letter-spacing: 1.5px; box-shadow: 0 0 25px var(--accent-glow); }
+        .game-box button:hover { transform: scale(1.08); box-shadow: 0 0 45px var(--accent); background: #ffffff; color: #000; }
         
-        canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.08; }
-        footer { text-align: center; margin-top: 45px; color: #555; font-size: 0.8rem; letter-spacing: 2px; font-family: monospace; }
+        canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.09; }
+        footer { text-align: center; margin-top: 50px; color: #555; font-size: 0.8rem; letter-spacing: 2.5px; font-family: monospace; }
     </style>
     
-    <!-- Quantum Master Schema (Synced with updated profile links) -->
+    <!-- Quantum Master Schema (Backend Intact) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -142,7 +157,14 @@
         <!-- Live HUD Status Bar -->
         <div class="status-bar">
             <div class="blinking-dot"></div>
-            SYS_SECURE // SIALKOT & LAHORE // 2030 HUD ACTIVE
+            SYS_SECURE // SIALKOT & LAHORE // 2030 HOLOGRAPHIC HUD ACTIVE
+        </div>
+
+        <!-- Holographic Avatar Frame -->
+        <div class="profile-container">
+            <div class="avatar-frame">
+                <span>AZ</span>
+            </div>
         </div>
 
         <div class="hero">
@@ -154,24 +176,24 @@
             <div class="elite-badge">⚡ Verified Global Entity // Est. 2016</div>
         </div>
 
-        <!-- Next-Gen Sci-Fi Buttons with Hover Arrows -->
+        <!-- Jaw-Dropping Sci-Fi Buttons -->
         <div class="grid">
-            <a href="https://linktr.ee/azzylegacy" class="btn" target="_blank">Linktree Hub <span>[ 01 ]</span></a>
-            <a href="https://drive.google.com/file/d/13opzb5GGpTH-OTIxTEC-OT7UdrtH6Upu/view?usp=drivesdk" class="btn" target="_blank">Professional CV (PDF) <span>[ 02 ]</span></a>
-            <a href="https://www.instagram.com/azzylegacy?igsi=MTI1ZzZ4ZDg1dWZhMw==" class="btn" target="_blank">Instagram (Main) <span>[ 03 ]</span></a>
-            <a href="https://www.instagram.com/azzy.raw?igsi=MTZ1MzFhNmt4MGU5bw==" class="btn" target="_blank">Instagram (Raw / Personal) <span>[ 04 ]</span></a>
-            <a href="https://www.tiktok.com/@azzylegacy?_r=1&_t=ZS-995YVli1sls" class="btn" target="_blank">TikTok (Official) <span>[ 05 ]</span></a>
-            <a href="https://www.tiktok.com/@azzy.raw?_r=1&_t=ZS-995YaWCG8qQ" class="btn" target="_blank">TikTok (Personal) <span>[ 06 ]</span></a>
-            <a href="https://www.snapchat.com/add/azzy_studio" class="btn" target="_blank">Snapchat <span>[ 07 ]</span></a>
-            <a href="https://www.facebook.com/share/1C9nU5Veth/" class="btn" target="_blank">Facebook <span>[ 08 ]</span></a>
+            <a href="https://linktr.ee/azzylegacy" class="btn" target="_blank">Linktree Hub <span>↗</span></a>
+            <a href="https://drive.google.com/file/d/13opzb5GGpTH-OTIxTEC-OT7UdrtH6Upu/view?usp=drivesdk" class="btn" target="_blank">Professional CV (PDF) <span>↗</span></a>
+            <a href="https://www.instagram.com/azzylegacy?igsi=MTI1ZzZ4ZDg1dWZhMw==" class="btn" target="_blank">Instagram (Main) <span>↗</span></a>
+            <a href="https://www.instagram.com/azzy.raw?igsi=MTZ1MzFhNmt4MGU5bw==" class="btn" target="_blank">Instagram (Raw / Personal) <span>↗</span></a>
+            <a href="https://www.tiktok.com/@azzylegacy?_r=1&_t=ZS-995YVli1sls" class="btn" target="_blank">TikTok (Official) <span>↗</span></a>
+            <a href="https://www.tiktok.com/@azzy.raw?_r=1&_t=ZS-995YaWCG8qQ" class="btn" target="_blank">TikTok (Personal) <span>↗</span></a>
+            <a href="https://www.snapchat.com/add/azzy_studio" class="btn" target="_blank">Snapchat <span>↗</span></a>
+            <a href="https://www.facebook.com/share/1C9nU5Veth/" class="btn" target="_blank">Facebook <span>↗</span></a>
         </div>
 
-        <!-- Interactive Beat Pulse Widget -->
+        <!-- Cyber-Reactor Pulse Widget -->
         <div class="game-box">
             <h3>⚡ Azzylegacy Beat Pulse</h3>
             <p id="game-text">Tap the pulse to generate underground creative frequency!</p>
             <button onclick="pulseBeat()">Generate Pulse</button>
-            <div id="score" style="margin-top: 12px; font-weight: bold; color: var(--accent); font-family: monospace;">Frequency Level: 0 Hz</div>
+            <div id="score" style="margin-top: 15px; font-weight: bold; color: var(--accent); font-family: monospace; font-size: 1.1rem;">Frequency Level: 0 Hz</div>
         </div>
 
         <div class="bio">
@@ -204,7 +226,7 @@
         for(let i=0; i<columns; i++) drops[i] = 1;
 
         function drawMatrix() {
-            ctx.fillStyle = 'rgba(2, 2, 2, 0.05)';
+            ctx.fillStyle = 'rgba(1, 1, 1, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = '#00ffcc';
             ctx.font = fontSize + 'px monospace';
