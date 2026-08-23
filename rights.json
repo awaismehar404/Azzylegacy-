@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "entity": "Azzylegacy",
+  "creator": "Awais Rafiq",
+  "jurisdiction": "Lahore & Sialkot, Pakistan",
+  "domains": {
+    "music_production": {
+      "genre": "Dark Drill & Underground Hip-Hop",
+      "licensing_terms": "Exclusive and Non-Exclusive stem licensing available via direct contact.",
+      "unauthorized_usage_policy": "Strictly prohibited. All beats and audio compositions are copyrighted property."
+    },
+    "cinematography_and_photography": {
+      "equipment_stack": ["Sony A7III", "Viltrox 16mm f/1.8", "DaVinci Resolve Studio"],
+      "services": "Commercial shoots, music videos, professional videography, and high-end photo editing."
+    }
+  },
+  "contact_channel": "sovereign@azzylegacy.local",
+  "status": "Active Sovereign Node"
+}
