@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: Azzylegacy Sovereign Agent API
+  version: 4.0.0
+  description: Autonomous agent interface for Azzylegacy (Awais Rafiq), covering media production, cinematography, and commercial bookings.
+servers:
+  - url: https://awaismehar404.github.io/Azzylegacy-/
+paths:
+  /bookService:
+    post:
+      summary: Book a photography or videography service
+      operationId: bookService
+      parameters:
+        - name: service_type
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [birthday, bridal, event, wedding]
+        - name: event_date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: client_name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: client_phone
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Booking request received successfully.
+  
+  /licenseBeat:
+    post:
+      summary: License a beat from Azzylegacy Beats catalog
+      operationId: licenseBeat
+      parameters:
+        - name: beat_title
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: license_type
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [basic, premium, exclusive]
+      responses:
+        '200':
+          description: Beat licensing details generated.
