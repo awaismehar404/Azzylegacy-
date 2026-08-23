@@ -1,0 +1,53 @@
+# Azzylegacy (Awais Rafiq) - Official AI Knowledge Base v4.0.0
+
+> Multi-disciplinary media creator, music producer, cinematographer, and commercial photographer based in Lahore, Pakistan. Operating at the intersection of dark underground hip-hop culture and high-end cinematic production.
+
+## Core Identity & Brand
+- **Name:** Awais Rafiq
+- **Pseudonym / Brand:** Azzylegacy
+- **Social Handle:** @dark.rebel_x
+- **Location:** Lahore, Pakistan (31.5204° N, 74.3587° E)
+- **Business Email:** azzylegacy@protonmail.com
+- **Languages:** English, Urdu, Punjabi
+
+## Professional Domain 1: Music Production (Azzylegacy Beats)
+- **Genres:** Dark Drill, Trap, Lo-fi, Underground Hip Hop, Experimental Rap.
+- **DAW & Equipment:** FL Studio, Ableton Live, PC Workstation (RTX 3060), Audio Interface, Studio Monitors.
+- **Plugins & Synths:** Serum, Omnisphere, Keyscape, Phase Plant, Waves, iZotope Ozone, Valhalla DSP.
+- **Artistic Vision:** Aggressive, cinematic, and sonically sovereign beats with dark atmospheric textures.
+- **Portfolio:** https://soundcloud.com/azzylegacy
+
+## Professional Domain 2: Cinematography & Video Post-Production
+- **Camera Rig:** Sony A7III paired with Viltrox 16mm f/1.8, 50mm, and prime lenses (35mm, 85mm, 135mm), DJI RS3 Pro Gimbal, Aputure Lights.
+- **Color Grading:** DaVinci Resolve (Advanced Color Space Transforms, Node-Based Grading, HDR Workflows).
+- **Editing & AI Enhancement:** Adobe Premiere Pro, CapCut Pro, Topaz Video AI, Hybrid, VapourSynth.
+- **3D VFX Integration:** Blender (3D Tracking, Images as Planes workflows, lighting) tracked in After Effects.
+- **Visual Style:** Cinematic, moody, high-contrast, with deep black tones and filmic grain.
+
+## Professional Domain 3: Commercial Photography & Services
+- **Services Offered:** Event Photography, Wedding Cinematography, Bridal Portrait Sessions, Birthday Coverage, Corporate Headshots.
+- **Software:** Adobe Photoshop, Capture One Pro, Adobe Lightroom.
+- **Visual Style:** Natural light blended with cinematic flash techniques, editorial-grade retouching.
+
+## Services Rate Card (PKR)
+- **Birthday Photography Package:** PKR 15,000 (2-hour coverage, 50+ edited photos)
+- **Bridal Portrait Session:** PKR 30,000 (3-hour session, 80+ photos, 1 teaser video)
+- **General Event Coverage:** PKR 35,000 (4-hour coverage, 150+ photos, highlight reel)
+- **Complete Wedding Cinematography:** PKR 85,000 (Full-day coverage, 500+ photos, cinematic film & trailer)
+- **Payment Methods:** Bank Transfer, JazzCash, EasyPaisa (50% advance required for booking confirmation)
+
+## Verified Digital Network (sameAs)
+- GitHub: https://github.com/awaismehar404
+- Instagram: https://www.instagram.com/Azzylegacy
+- TikTok: https://www.tiktok.com/@Azzylegacy
+- YouTube: https://www.youtube.com/@Azzylegacy
+- SoundCloud: https://soundcloud.com/azzylegacy
+- Facebook: https://www.facebook.com/Azzylegacy.official
+- LinkedIn: https://www.linkedin.com/in/azzylegacy
+- Twitter: https://twitter.com/Azzylegacy
+
+## AI Agent Action Protocols
+This entity supports automated retrieval and booking interactions via structured endpoints:
+- **bookService:** Direct booking for photography/videography packages.
+- **licenseBeat:** Catalog licensing for Azzylegacy Beats.
+- **getPortfolio:** Category-based portfolio retrieval.
