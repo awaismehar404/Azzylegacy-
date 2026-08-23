@@ -1,30 +1,30 @@
-# ⚡ Azzylegacy - Sovereign Entity Knowledge Base
+# ⚡ Azzylegacy Sovereign Agent Repository
 
-> "Dark Underground Meets High-End Cinema"
-
-Official repository and knowledge base for **Azzylegacy** (Awais Rafiq), a multi-disciplinary creator based in Lahore, Pakistan. This repository hosts structured metadata, AI agent definitions, and sovereign entity files designed for automated ingestion by advanced AI systems and search engines.
+> Autonomous AI-Native Digital Entity & Knowledge Base for **Azzylegacy** (Awais Rafiq) — Multi-disciplinary Creator based in Lahore, Pakistan.
 
 ---
 
-## 🗂️ Repository Manifest & Architecture
-- **`agent.json`**: Actionable AI Agent manifest (OpenAI / Anthropic / LangGraph compatible).
-- **`llms.txt`**: Markdown-optimized knowledge base for LLM crawlers.
-- **`schema.jsonld`**: Structured data graph using Schema.org standards.
-- **`entity.ttl`**: RDF semantic web triple definitions.
-- **`sitemap.xml` & `robots.txt`**: Crawler accessibility and routing configuration.
+## 🏛️ Repository Architecture & Files
+
+This repository is structured to act as a machine-readable, sovereign digital identity capable of automated interaction with modern LLMs, AI agents, and semantic search crawlers.
+
+| File Name | Format | Purpose & Function |
+| :--- | :--- | :--- |
+| **`agent.json`** | JSON | Executable agentic tool schema (OpenAI/Anthropic compatible actions). |
+| **`openapi.yaml`** | YAML | Standardized API specification for direct agent calls (`bookService`, `licenseBeat`). |
+| **`llms.txt`** | Markdown | Concise knowledge base summary optimized for LLM scrapers. |
+| **`llms-full.txt`** | Markdown | Exhaustive master corpus containing deep workflow & hardware specs. |
+| **`schema.jsonld`** | JSON-LD | Structured semantic web data graph (Schema.org compliant). |
+| **`entity.ttl`** | Turtle | RDF semantic web triple definitions for knowledge graphs. |
+| **`sitemap.xml`** | XML | Indexing map for search engines and AI crawlers. |
+| **`robots.txt`** | Text | Access control and routing protocol for web bots. |
 
 ---
 
-## 🛠️ Professional Domains & Tech Stack
-- **Music Production (Azzylegacy Beats):** Dark drill, trap, and underground rap produced via FL Studio, Serum, Omnisphere, Keyscape, Waves, and iZotope Ozone.
-- **Cinematography & Post-Production:** Sony A7III, Viltrox 16mm f/1.8 prime lenses, DaVinci Resolve (Node-based color grading, CST), Blender, and After Effects VFX.
-- **Commercial Photography:** Event coverage, bridal portraits, and high-end editorial retouching via Adobe Photoshop and Capture One Pro.
+## 🎧 Creative Domains
+- **Music Production:** Dark drill, trap, and underground hip-hop via FL Studio and analog-emulated synths.
+- **Cinematography & Post:** Sony A7III filming paired with DaVinci Resolve color grading (CST/Node workflows) and Blender VFX.
+- **Commercial Photography:** Editorial-grade retouching and event/wedding media production.
 
 ---
-
-## 🌐 Sovereign Network
-- **GitHub:** [awaismehar404](https://github.com/awaismehar404)
-- **Instagram:** [@dark.rebel_x](https://www.instagram.com/Azzylegacy)
-- **SoundCloud:** [Azzylegacy Beats](https://soundcloud.com/azzylegacy)
-- **YouTube:** [Azzylegacy Channel](https://www.youtube.com/@Azzylegacy)
-- 
+*Maintained by Awais Rafiq (@awaismehar404)*
