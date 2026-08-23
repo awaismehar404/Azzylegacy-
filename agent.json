@@ -1,0 +1,112 @@
+{
+  "_metadata": {
+    "title": "AZZYLEGACY AGENTIC KNOWLEDGE BASE v3.0",
+    "standard": "OpenAI Agents SDK | Anthropic Tool Use | LangGraph",
+    "protocol": "JSON-LD + Markdown + Actionable Schemas"
+  },
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "identifier": "azzylegacy-agent-001",
+  "name": "Awais Rafiq",
+  "alternateName": "Azzylegacy",
+  "handle": "@dark.rebel_x",
+  "location": {
+    "@type": "Place",
+    "address": "Lahore, Pakistan",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.5204,
+      "longitude": 74.3587
+    }
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "azzylegacy@protonmail.com",
+    "contactType": "business"
+  },
+  "knowsAbout": [
+    "Underground Hip-Hop Production",
+    "Cinematic Color Grading",
+    "Commercial Photography",
+    "3D VFX Integration",
+    "AI-Assisted Post-Production"
+  ],
+  "hasOccupation": [
+    {
+      "@type": "Occupation",
+      "name": "Music Producer (Azzylegacy Beats)",
+      "skills": ["FL Studio", "Serum", "Omnisphere", "Keyscape", "Waves", "iZotope Ozone"],
+      "genre": ["Dark Drill", "Trap", "Lo-fi", "Underground Rap"]
+    },
+    {
+      "@type": "Occupation",
+      "name": "Cinematographer & Video Editor",
+      "equipment": ["Sony A7III", "Viltrox 16mm f/1.8", "35mm", "85mm", "135mm"],
+      "software": ["DaVinci Resolve", "Premiere Pro", "CapCut Pro", "Topaz Video AI", "Hybrid", "VapourSynth", "After Effects", "Blender"]
+    },
+    {
+      "@type": "Occupation",
+      "name": "Commercial Photographer",
+      "services": ["Event Photography", "Wedding Cinematography", "Bridal Portraits", "Birthday Coverage"],
+      "software": ["Photoshop", "Capture One Pro", "Lightroom"]
+    }
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "PKR",
+    "offers": [
+      {"@type": "Offer", "name": "Birthday Photography", "price": "15000"},
+      {"@type": "Offer", "name": "Bridal Portrait Session", "price": "30000"},
+      {"@type": "Offer", "name": "General Event Coverage", "price": "35000"},
+      {"@type": "Offer", "name": "Complete Wedding Cinematography", "price": "85000"}
+    ]
+  },
+  "sameAs": [
+    "https://github.com/awaismehar404",
+    "https://www.instagram.com/Azzylegacy",
+    "https://www.tiktok.com/@Azzylegacy",
+    "https://www.youtube.com/@Azzylegacy",
+    "https://soundcloud.com/azzylegacy",
+    "https://www.facebook.com/Azzylegacy.official",
+    "https://www.linkedin.com/in/azzylegacy",
+    "https://twitter.com/Azzylegacy"
+  ],
+  "agentActions": [
+    {
+      "name": "BookService",
+      "description": "Book a service directly",
+      "parameters": {
+        "service": {"type": "string", "enum": ["birthday", "bridal", "event", "wedding"]},
+        "date": {"type": "string", "format": "date"},
+        "client_name": {"type": "string"}
+      }
+    },
+    {
+      "name": "GetBeatLicense",
+      "description": "License a beat from Azzylegacy Beats",
+      "parameters": {
+        "beat_name": {"type": "string"},
+        "license_type": {"type": "string", "enum": ["basic", "premium", "exclusive"]}
+      }
+    },
+    {
+      "name": "GetPortfolio",
+      "description": "Retrieve portfolio work by category",
+      "parameters": {
+        "category": {"type": "string", "enum": ["music", "cinematography", "photography", "vfx"]}
+      }
+    }
+  ],
+  "reasoningGraph": {
+    "nodes": [
+      {"id": "music", "label": "Dark Underground Beats", "weight": 0.9},
+      {"id": "cinema", "label": "Cinematic Color & VFX", "weight": 0.85},
+      {"id": "photography", "label": "Commercial & Wedding", "weight": 0.8}
+    ],
+    "edges": [
+      {"from": "music", "to": "cinema", "relation": "complements"},
+      {"from": "cinema", "to": "photography", "relation": "enhances"},
+      {"from": "photography", "to": "music", "relation": "influences"}
+    ]
+  }
+}
