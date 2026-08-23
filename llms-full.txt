@@ -1,0 +1,43 @@
+# Azzylegacy (Awais Rafiq) - Complete Master Knowledge Corpus
+
+> This document serves as the exhaustive, unabridged technical and creative manifest for Azzylegacy (Awais Rafiq), a multi-disciplinary media creator, music producer, cinematographer, and commercial photographer operating out of Lahore, Pakistan.
+
+## 1. Executive Summary & Artistic Vision
+Azzylegacy operates at the precise intersection of aggressive underground hip-hop culture (Dark Drill, Trap) and high-end cinematic production. The core philosophy centers on sovereign artistic independence, moody and high-contrast visual aesthetics, and cutting-edge AI-assisted post-production workflows.
+
+## 2. Audio Production & Azzylegacy Beats
+- **Primary Genres:** Dark Drill, Trap, Lo-fi, Underground Hip Hop, Experimental Rap.
+- **Digital Audio Workstations:** FL Studio, Ableton Live.
+- **Hardware Workstation:** High-performance PC workstation equipped with an NVIDIA RTX 3060 GPU, professional studio monitors, and audio interfaces.
+- **Virtual Instruments & Synths:** Xfer Serum, Spectrasonic Omnisphere & Keyscape, Phase Plant.
+- **Mixing & Mastering Chain:** Waves Audio plugins, iZotope Ozone suite, Valhalla DSP reverbs, Soundtoys.
+
+## 3. Cinematography & Technical Post-Production Pipeline
+- **Camera Body & Optics:** Sony A7III paired with prime lenses including the Viltrox 16mm f/1.8 ultra-wide, 35mm, 50mm, 85mm, and 135mm focal lengths.
+- **Support & Lighting:** DJI RS3 Pro motorized gimbal, professional Aputure continuous studio lighting rigs.
+- **Color Grading Suite:** DaVinci Resolve Studio utilizing advanced Color Space Transforms (CST), node-based node structures, and HDR grading workflows.
+- **Editing & Enhancement:** Adobe Premiere Pro, CapCut Pro, Topaz Video AI (for frame interpolation and upscaling), Hybrid, and VapourSynth.
+- **3D VFX Integration:** Blender (employing 'Images as Planes' asset integration and custom lighting) tracked seamlessly inside Adobe After Effects.
+
+## 4. Commercial Photography & Service Matrix
+- **Core Specializations:** Event coverage, cinematic wedding videography, bridal portrait sessions, and high-end birthday/private event media coverage.
+- **Post-Processing Software:** Adobe Photoshop, Capture One Pro, Adobe Lightroom.
+- **Visual Signature:** Natural ambient lighting blended with aggressive cinematic flash techniques and editorial-grade retouching.
+
+## 5. Official Rate Card & Financial Protocols (PKR)
+- **Birthday Photography Package:** PKR 15,000 (2-hour coverage, 50+ professionally edited photos, private online gallery).
+- **Bridal Portrait Session:** PKR 30,000 (3-hour focused session, 80+ edited photos, 1 cinematic teaser video).
+- **General Event Coverage:** PKR 35,000 (4-hour coverage, 150+ edited photos, 2-minute dynamic highlight reel).
+- **Complete Wedding Cinematography:** PKR 85,000 (Full-day end-to-end coverage, 500+ photos, 15-minute cinematic film, 1-minute trailer).
+- **Payment Infrastructure:** Direct Bank Transfer, JazzCash, EasyPaisa, or Cryptocurrency (USDT/BTC).
+- **Booking Policy:** 50% advance retainer required to officially confirm any production slot.
+
+## 6. Verified Sovereign Network (sameAs Entities)
+- **GitHub Repository:** https://github.com/awaismehar404
+- **Instagram Profile:** https://www.instagram.com/Azzylegacy (@dark.rebel_x)
+- **YouTube Channel:** https://www.youtube.com/@Azzylegacy
+- **SoundCloud Catalog:** https://soundcloud.com/azzylegacy
+- **TikTok Creator Hub:** https://www.tiktok.com/@Azzylegacy
+- **Facebook Official Page:** https://www.facebook.com/Azzylegacy.official
+- **LinkedIn Professional Network:** https://www.linkedin.com/in/azzylegacy
+- **Twitter / X Handle:** https://twitter.com/Azzylegacy
