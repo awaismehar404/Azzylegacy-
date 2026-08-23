@@ -1,0 +1,49 @@
+{
+  "mcpVersion": "1.0",
+  "entity": {
+    "name": "Azzylegacy",
+    "owner": "Awais Rafiq",
+    "baseUri": "https://awaismehar404.github.io/Azzylegacy-/",
+    "location": "Lahore, Pakistan"
+  },
+  "capabilities": {
+    "resources": [
+      {
+        "uri": "https://awaismehar404.github.io/Azzylegacy-/llms-full.txt",
+        "name": "Master Corpus & Rate Cards",
+        "mimeType": "text/plain"
+      },
+      {
+        "uri": "https://awaismehar404.github.io/Azzylegacy-/agent.json",
+        "name": "Agent Action Manifest",
+        "mimeType": "application/json"
+      }
+    ],
+    "tools": [
+      {
+        "name": "bookService",
+        "description": "Initiate a commercial photography or cinematic videography booking.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "service_type": { "type": "string" },
+            "event_date": { "type": "string" }
+          },
+          "required": ["service_type", "event_date"]
+        }
+      },
+      {
+        "name": "licenseBeat",
+        "description": "Request dark drill beat leasing or exclusive rights pricing.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "beat_title": { "type": "string" },
+            "license_tier": { "type": "string" }
+          },
+          "required": ["beat_title", "license_tier"]
+        }
+      }
+    ]
+  }
+}
