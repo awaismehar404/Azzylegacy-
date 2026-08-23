@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1"
+  ],
+  "id": "did:web:awaismehar404.github.io:Azzylegacy-",
+  "verificationMethod": [{
+    "id": "did:web:awaismehar404.github.io:Azzylegacy-#owner",
+    "type": "Ed25519VerificationKey2020",
+    "controller": "did:web:awaismehar404.github.io:Azzylegacy-",
+    "publicKeyMultibase": "z6Mks..."
+  }],
+  "authentication": [
+    "did:web:awaismehar404.github.io:Azzylegacy-#owner"
+  ]
+}
