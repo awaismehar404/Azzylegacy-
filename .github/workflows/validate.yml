@@ -1,0 +1,29 @@
+name: Validate Entity Files
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON Files
+        run: |
+          echo "Checking JSON syntax for agent.json..."
+          jq . agent.json > /dev/null
+          echo "Checking JSON syntax for schema.jsonld..."
+          jq . schema.jsonld > /dev/null
+          echo "All JSON files are valid!"
+
+      - name: Validate YAML Files
+        run: |
+          echo "Checking YAML syntax for openapi.yaml..."
+          python3 -c 'import yaml, sys; yaml.safe_load(open("openapi.yaml"))'
+          echo "YAML file is valid!"
+          
