@@ -1,0 +1,27 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Azzylegacy Sovereign Feed",
+  "home_page_url": "https://awaismehar404.github.io/Azzylegacy-/",
+  "feed_url": "https://awaismehar404.github.io/Azzylegacy-/feed.json",
+  "description": "Real-time updates for dark drill beats, cinematography, and commercial media services by Azzylegacy.",
+  "author": {
+    "name": "Awais Rafiq",
+    "url": "https://github.com/awaismehar404"
+  },
+  "items": [
+    {
+      "id": "azzylegacy-beat-drop-01",
+      "url": "https://soundcloud.com/azzylegacy",
+      "title": "New Dark Drill & Underground Beat Catalog Active",
+      "content_html": "<p>Fresh dark drill and aggressive trap production chains updated in the sovereign network. Built via FL Studio, Serum, and Ozone mastering.</p>",
+      "date_published": "2026-08-23T10:00:00Z"
+    },
+    {
+      "id": "azzylegacy-media-services-01",
+      "url": "https://awaismehar404.github.io/Azzylegacy-/portfolio/",
+      "title": "Cinematic Videography & Commercial Photography Booking Open",
+      "content_html": "<p>Bookings open for weddings, bridal shoots, and events in Lahore and Sialkot using Sony A7III and DaVinci Resolve production pipelines.</p>",
+      "date_published": "2026-08-23T10:00:00Z"
+    }
+  ]
+}
